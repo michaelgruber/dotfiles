@@ -1,0 +1,14 @@
+[user]
+	name = Michael Gruber
+	email = michaelegruber@gmail.com
+[core]
+	editor = vim
+[color]
+	ui = true
+[merge]
+	tool = vimdiff
+[alias]
+	unstage = reset HEAD --
+	last = log -1 HEAD
+[cor]
+	autocrlf = false
