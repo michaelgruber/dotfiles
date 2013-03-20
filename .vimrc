@@ -1,6 +1,7 @@
 " General
 set nocompatible " Turns off vi compatibility
 set number " Line numbers
+set ruler " Cursor location
 
 syntax enable
 
