@@ -5,6 +5,9 @@ set ruler " Cursor location
 
 syntax enable
 
+" Pathogen
+execute pathogen#infect()
+
 " Indentation
 set tabstop=2
 set shiftwidth=2
