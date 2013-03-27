@@ -1,0 +1,6 @@
+# github/gitignore vim.gitignore
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
