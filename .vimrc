@@ -16,3 +16,8 @@ set expandtab " soft tabs
 set smartindent
 set autoindent
 filetype indent on
+
+" PLUGINS
+
+" Zen Coding
+let g:user_zen_mode='a'    "enable all function in all mode.
