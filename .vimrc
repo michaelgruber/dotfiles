@@ -9,15 +9,20 @@ syntax enable
 execute pathogen#infect()
 
 " Indentation
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab " soft tabs
 
 set smartindent
 set autoindent
 filetype indent on
 
+" AUTOCMDS
+
+" sets tab width to two for specific filetypes
+autocmd FileType ruby,haml,eruby,yaml,html,sass,cucumber set tabstop=2 shiftwidth=4 
+
 " PLUGINS
 
 " Zen Coding
-let g:user_zen_mode='a'    "enable all function in all mode.
+let g:user_zen_mode='a' "enable all function in all mode.
