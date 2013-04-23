@@ -20,7 +20,7 @@ filetype indent on
 " AUTOCMDS
 
 " sets tab width to two for specific filetypes
-autocmd FileType ruby,haml,eruby,yaml,html,sass,cucumber set tabstop=2 shiftwidth=4 
+autocmd FileType ruby,haml,eruby,yaml,html,sass,cucumber set tabstop=2 shiftwidth=2
 
 " PLUGINS
 
