@@ -17,6 +17,9 @@ set smartindent
 set autoindent
 filetype indent on
 
+" Aliases
+command Nt NERDTree
+
 " AUTOCMDS
 
 " sets tab width to two for specific filetypes
