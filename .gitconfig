@@ -13,3 +13,7 @@
 	last = log -1 HEAD
 [cor]
 	autocrlf = false
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
