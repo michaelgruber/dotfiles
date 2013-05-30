@@ -2,6 +2,8 @@
 set nocompatible " Turns off vi compatibility
 set number " Line numbers
 set ruler " Cursor location
+set undofile " Use undo file (>=7.3)
+set undodir=/Users/michael/.vimundo/ " Undo file dir
 
 syntax enable
 
