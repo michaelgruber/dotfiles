@@ -1,4 +1,7 @@
-" General
+"
+" GENERAL 
+"
+
 set nocompatible " Turns off vi compatibility
 set number       " Line numbers
 set ruler        " Cursor location
@@ -26,7 +29,10 @@ command Nt NERDTree
 au BufRead,BufNewFile *.rabl setf ruby " Rabl
 au BufRead,BufNewFile *.txt setf markdown " Markdown
 
+
+"
 " AUTOCMDS
+"
 
 " sets tab width to two for specific filetypes
 autocmd FileType ruby,haml,eruby,yaml,html,sass,cucumber set tabstop=2 shiftwidth=2
@@ -34,21 +40,26 @@ autocmd FileType ruby,haml,eruby,yaml,html,sass,cucumber set tabstop=2 shiftwidt
 autocmd VimEnter * NERDTree | wincmd p
 
 
+"
 " PLUGINS
+"
 
 " Zen Coding
 let g:user_zen_mode='a' " enable all function in all mode.
 
 
+"
+" OS SPECIFIC
+"
+
 let s:uname = system("echo -n \"$(uname)\"") " get OS type
 
-" MAC ONLY
+" OS X
 if !v:shell_error && s:uname == "Darwin"
     set undodir=/Users/michael/.vimundo/ " Undo file dir
 endif
 
-
-" LINUX ONLY
+" Linux 
 if !v:shell_error && s:uname == "Linux"
     set undodir=/home/michael/.vimundo/ " Undo file dir
 endif
