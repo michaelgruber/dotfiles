@@ -7,6 +7,7 @@ set number       " Line numbers
 set ruler        " Cursor location
 set undofile     " Use undo file (>=7.3)
 set hidden       " Hide buffer instead of closing
+set spell        " Spell checker
 
 syntax enable
 filetype indent plugin on
