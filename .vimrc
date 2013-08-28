@@ -15,6 +15,10 @@ filetype indent plugin on
 " Pathogen
 execute pathogen#infect()
 
+" Color Scheme
+set background=light
+colorscheme solarized
+
 " Indentation
 set tabstop=4
 set shiftwidth=4
