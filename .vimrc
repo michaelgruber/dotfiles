@@ -57,14 +57,22 @@ let g:user_zen_mode='a' " enable all function in all mode.
 " OS SPECIFIC
 "
 
-let s:uname = system("echo -n \"$(uname)\"") " get OS type
 
-" OS X
-if !v:shell_error && s:uname == "Darwin"
-    set undodir=/Users/michael/.vimundo/ " Undo file dir
-endif
+" Windows
+if has('win32')
+    cd ~
+    set undodir=C:/Michael/_vimundo/ " Undo file dir
+    set guifont=Courier\ New
+elseif has('unix')
+    let s:uname = system("echo -n \"$(uname)\"") " get OS type
 
-" Linux 
-if !v:shell_error && s:uname == "Linux"
-    set undodir=/home/michael/.vimundo/ " Undo file dir
+    " OS X
+    if !v:shell_error && s:uname == "Darwin"
+        set undodir=/Users/michael/.vimundo/ " Undo file dir
+    endif
+
+    " Linux 
+    if !v:shell_error && s:uname == "Linux"
+        set undodir=/home/michael/.vimundo/ " Undo file dir
+    endif
 endif
