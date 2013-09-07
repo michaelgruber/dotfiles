@@ -25,7 +25,7 @@ alias ww='cd ~/work/rd_ww_inapp'
 #
 if [[ $OSTYPE == darwin* ]]; then
     # Add PHP bin from homebrew to `$PATH`
-    export PATH="$PATH:$(brew --prefix josegonzalez/php/php54)/bin"
+    export PATH="$PATH:$(brew --prefix josegonzalez/php/php55)/bin"
 
     # Git autocompletion 
     if [ -f `brew --prefix`/etc/bash_completion ]; then
