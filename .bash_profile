@@ -5,8 +5,9 @@
 # Add bins to to the `$PATH`
 export PATH="/usr/local/bin:$HOME/bin:$PATH"
 
-# Load RVM function
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+# Chruby
+source /usr/local/share/chruby/chruby.sh # enable chruby
+source /usr/local/share/chruby/auto.sh   # enable auto-switching
 
 
 #
