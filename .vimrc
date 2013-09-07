@@ -13,6 +13,7 @@ syntax enable
 filetype indent plugin on
 
 " Pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 " Color Scheme
