@@ -35,3 +35,12 @@ if [[ $OSTYPE == darwin* ]]; then
     # Use MacVim default (vi for vanilla vim)
     alias vim='mvim'
 fi
+
+#
+# LINUX ONLY 
+#
+if [[ $OSTYPE == linux-gnu ]]; then
+    alias vim='gvim'
+fi
+
+
