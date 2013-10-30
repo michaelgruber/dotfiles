@@ -12,6 +12,9 @@ export PATH="/usr/local/bin:$HOME/bin:$PATH"
 # ALIASES
 #
 
+# General
+alias clear='clear && clear'
+
 # Rails
 alias guard='bundle exec guard'
 
