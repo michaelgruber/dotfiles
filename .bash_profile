@@ -5,8 +5,20 @@
 # Add bins to to the `$PATH`
 export PATH="/usr/local/bin:$HOME/bin:$PATH"
 
+# Git info for bash prompt
+source ~/.git-prompt.sh
+
+# Setup bash prompt
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWCOLORHINTS=1
+GIT_PS1_SHOWSTASHSTATE=1
+GIT_PS1_SHOWCOLORHINTS=1
+GIT_PS1_SHOWUPSTREAM="auto"
+PROMPT_COMMAND='__git_ps1 "\033[1m\w\033[0m" ": "'
+
 # Load RVM function
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 
 #
 # ALIASES
@@ -17,6 +29,7 @@ alias clear='clear && clear'
 
 # Rails
 alias guard='bundle exec guard'
+
 
 #
 # MAC ONLY 
@@ -31,6 +44,7 @@ if [[ $OSTYPE == darwin* ]]; then
     # Use MacVim default (vi for vanilla vim)
     alias vim='mvim'
 fi
+
 
 #
 # LINUX ONLY 
