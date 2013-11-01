@@ -1,4 +1,49 @@
+#
+# Dotfiles
+#
+
+.CFUserTextEncoding
+.Trash/
+.bash_history
+.dropbox/
+.gem/
+.guard_history
+.irb-history
+.rnd
+.rvm/
+.ssh/
+.st3
+.viminfo
+
+
+#
+# OS X Folders
+#
+
+Desktop/
+Documents/
+Downloads/
+Dropbox/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
+
+
+#
+# My Folders
+#
+
+bin/
+dev/
+notes
+
+
+#
 # github/gitignore vim.gitignore
+#
+
 .*.s[a-w][a-z]
 *.un~
 Session.vim
