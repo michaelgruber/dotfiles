@@ -30,6 +30,9 @@ alias clear='clear && clear'
 # Rails
 alias guard='bundle exec guard'
 
+# Projects
+alias agg='cd ~/work/agg2.5'
+
 
 #
 # MAC ONLY 
