@@ -33,11 +33,11 @@ alias guard='bundle exec guard'
 
 
 #
-# MAC ONLY 
+# MAC ONLY
 #
 if [[ $OSTYPE == darwin* ]]; then
 
-    # Git autocompletion 
+    # Git autocompletion
     if [ -f `brew --prefix`/etc/bash_completion ]; then
         . `brew --prefix`/etc/bash_completion
     fi
@@ -48,7 +48,7 @@ fi
 
 
 #
-# LINUX ONLY 
+# LINUX ONLY
 #
 if [[ $OSTYPE == linux-gnu ]]; then
     alias vim='gvim'
