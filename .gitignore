@@ -2,6 +2,7 @@
 # Dotfiles
 #
 
+.bundler/
 .cache/
 .CFUserTextEncoding
 .config/
