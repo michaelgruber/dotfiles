@@ -19,7 +19,7 @@ PROMPT_COMMAND='__git_ps1 "\[\033[1m\]\w\[\033[0m\]" ": "'
 # Chruby
 source /usr/local/share/chruby/chruby.sh # enable chruby
 source /usr/local/share/chruby/auto.sh   # enable auto-switching
-
+chruby ruby-2.0
 
 #
 # ALIASES
