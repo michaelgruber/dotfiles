@@ -226,7 +226,7 @@ var nextTopLeftCorner = slate.operation("corner", {
     "screen" : "next"
 });
 
-slate.bind("up:cmd,ctrl,shift", function (win) {
+slate.bind("up:cmd,alt", function (win) {
     if (!win) {
         return;
     }
@@ -238,7 +238,7 @@ slate.bind("up:cmd,ctrl,shift", function (win) {
     }
 });
 
-slate.bind("down:cmd,ctrl,shift", function (win) {
+slate.bind("down:cmd,alt", function (win) {
     if (!win) {
         return;
     }
@@ -254,7 +254,7 @@ slate.bind("down:cmd,ctrl,shift", function (win) {
     }
 });
 
-slate.bind("right:cmd,ctrl", function (win) {
+slate.bind("right:cmd,alt", function (win) {
     if (!win) {
         return;
     }
@@ -266,7 +266,7 @@ slate.bind("right:cmd,ctrl", function (win) {
     }
 });
 
-slate.bind("left:cmd,ctrl", function (win) {
+slate.bind("left:cmd,alt", function (win) {
     if (!win) {
         return;
     }
@@ -277,7 +277,7 @@ slate.bind("left:cmd,ctrl", function (win) {
     }
 });
 
-slate.bind("right:cmd,ctrl,shift", function (win) {
+slate.bind("right:cmd,alt,shift", function (win) {
     if (!win) {
         return;
     }
@@ -289,7 +289,7 @@ slate.bind("right:cmd,ctrl,shift", function (win) {
     }
 });
 
-slate.bind("right:cmd,ctrl,alt", function (win) {
+slate.bind("right:cmd,alt,ctrl", function (win) {
     if (!win) {
         return;
     }
@@ -301,7 +301,7 @@ slate.bind("right:cmd,ctrl,alt", function (win) {
     }
 });
 
-slate.bind("left:cmd,ctrl,alt", function (win) {
+slate.bind("left:cmd,alt,ctrl", function (win) {
     if (!win) {
         return;
     }
@@ -313,7 +313,7 @@ slate.bind("left:cmd,ctrl,alt", function (win) {
     }
 });
 
-slate.bind("left:cmd,ctrl,shift", function (win) {
+slate.bind("left:cmd,alt,shift", function (win) {
     if (!win) {
         return;
     }
