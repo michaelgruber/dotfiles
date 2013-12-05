@@ -226,6 +226,9 @@ var nextTopLeftCorner = slate.operation("corner", {
     "screen" : "next"
 });
 
+var grid = slate.operation("grid", {
+});
+
 slate.bind("up:cmd,alt", function (win) {
     if (!win) {
         return;
@@ -323,4 +326,13 @@ slate.bind("left:cmd,alt,shift", function (win) {
     } else {
         win.doOperation(topLeftCorner);
     }
+});
+
+slate.bind("tab:cmd,alt", function (win) {
+    if (!win) {
+        return;
+    }
+
+    win.doOperation(grid);
+
 });

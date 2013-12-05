@@ -28,9 +28,6 @@ chruby ruby-2.0
 # General
 alias clear='clear && clear'
 
-# Rails
-alias guard='bundle exec guard'
-
 
 #
 # MAC ONLY
