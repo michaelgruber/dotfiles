@@ -27,9 +27,6 @@ PROMPT_COMMAND='__git_ps1 "\[\033[1m\]\w\[\033[0m\]" ": "'
 # General
 alias clear='clear && clear'
 
-# Rails
-alias guard='bundle exec guard'
-
 # Projects
 alias agg='cd ~/work/agg2.5'
 
