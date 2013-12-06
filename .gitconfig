@@ -1,8 +1,8 @@
 [user]
 	name = Michael Gruber
-	email = michaelegruber@gmail.com
+	email = mail@michaelgruber.me
 [core]
-	editor = vim
+	editor = "subl -n -w"
 	excludesfile = ~/.gitignore_global
 [color]
 	ui = true
