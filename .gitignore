@@ -2,9 +2,9 @@
 # Dotfiles
 #
 
-.CFUserTextEncoding
-.Trash/
 .bash_history
+.CFUserTextEncoding
+.cups
 .dropbox/
 .gem/
 .guard_history
@@ -13,8 +13,9 @@
 .rvm/
 .ssh/
 .st3
+.Trash/
+.vagrant.d/
 .viminfo
-.cups
 
 
 #
@@ -32,6 +33,7 @@ Movies/
 Music/
 Pictures/
 Public/
+VirtualBox VMs/
 
 
 #
