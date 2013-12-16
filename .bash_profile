@@ -19,24 +19,12 @@ PROMPT_COMMAND='__git_ps1 "\[\033[1m\]\w\[\033[0m\]" ": "'
 # Load RVM function
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-
 #
-# ALIASES
-#
-
-# General
-alias clear='clear && clear'
-
-# Projects
-alias agg='cd ~/work/agg2.5'
-
-
-#
-# MAC ONLY 
+# MAC ONLY
 #
 if [[ $OSTYPE == darwin* ]]; then
 
-    # Git autocompletion 
+    # Git autocompletion
     if [ -f `brew --prefix`/etc/bash_completion ]; then
         . `brew --prefix`/etc/bash_completion
     fi
@@ -47,8 +35,10 @@ fi
 
 
 #
-# LINUX ONLY 
+# LINUX ONLY
 #
 if [[ $OSTYPE == linux-gnu ]]; then
     alias vim='gvim'
 fi
+
+source .aliases
