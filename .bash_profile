@@ -24,13 +24,6 @@ chruby ruby-2.0
 # Git Annex
 export PATH="/Applications/git-annex.app/Contents/MacOS:$PATH"
 
-#
-# ALIASES
-#
-
-# General
-alias clear='clear && clear'
-
 
 #
 # MAC ONLY
@@ -53,3 +46,5 @@ fi
 if [[ $OSTYPE == linux-gnu ]]; then
     alias vim='gvim'
 fi
+
+source .aliases
