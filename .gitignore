@@ -9,6 +9,7 @@
 .gem/
 .guard_history
 .irb-history
+.local/
 .rnd
 .rvm/
 .ssh/
@@ -40,7 +41,6 @@ VirtualBox VMs/
 # My Folders
 #
 
-bin/
 dev/
 notes
 work/
