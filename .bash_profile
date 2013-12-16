@@ -3,7 +3,7 @@
 #
 
 # Add bins to to the `$PATH`
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.local/bin:$PATH"
 
 # Git info for bash prompt
 source ~/.git-prompt.sh
