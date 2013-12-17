@@ -28,6 +28,10 @@ export PATH="/Applications/git-annex.app/Contents/MacOS:$PATH"
 source .aliases
 
 
+# Aliases
+source .aliases
+
+
 #
 # MAC ONLY
 #
