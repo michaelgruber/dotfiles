@@ -19,6 +19,10 @@ PROMPT_COMMAND='__git_ps1 "\[\033[1m\]\w\[\033[0m\]" ": "'
 # Load RVM function
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+# Aliases
+source .aliases
+
+
 #
 # MAC ONLY
 #
@@ -40,5 +44,3 @@ fi
 if [[ $OSTYPE == linux-gnu ]]; then
     alias vim='gvim'
 fi
-
-source .aliases

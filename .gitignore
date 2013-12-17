@@ -6,13 +6,18 @@
 .CFUserTextEncoding
 .cups
 .dropbox/
+.fontconfig/
 .gem/
+.gnupg/
 .guard_history
+.heroku/
 .irb-history
 .local/
 .rnd
+.rubies/
 .rvm/
 .ssh/
+.sbt/
 .st3
 .Trash/
 .vagrant.d/
@@ -41,9 +46,8 @@ VirtualBox VMs/
 # My Folders
 #
 
-dev/
-notes
-work/
+Notes
+Projects/
 
 
 #
