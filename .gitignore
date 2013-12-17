@@ -12,6 +12,7 @@
 .dropbox/
 .fontconfig/
 .gem/
+.gnupg/
 .guard_history
 .heroku/
 .irb-history
@@ -59,9 +60,8 @@ VirtualBox VMs/
 # My Folders
 #
 
-dev/
-notes
-work/
+Notes
+Projects/
 
 
 #
