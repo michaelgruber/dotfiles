@@ -16,8 +16,14 @@ GIT_PS1_SHOWCOLORHINTS=1
 GIT_PS1_SHOWUPSTREAM="auto"
 PROMPT_COMMAND='__git_ps1 "\[\033[1m\]\w\[\033[0m\]" ": "'
 
-# Load RVM function
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+# Chruby
+source /usr/local/share/chruby/chruby.sh # enable chruby
+source /usr/local/share/chruby/auto.sh   # enable auto-switching
+chruby ruby-2.0
+
+# Aliases
+source .aliases
+
 
 #
 # MAC ONLY
@@ -40,5 +46,3 @@ fi
 if [[ $OSTYPE == linux-gnu ]]; then
     alias vim='gvim'
 fi
-
-source .aliases
