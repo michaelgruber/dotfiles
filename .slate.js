@@ -328,6 +328,105 @@ slate.bind("left:cmd,alt,shift", function (win) {
     }
 });
 
+slate.bind("w:cmd,alt", function (win) {
+    if (!win) {
+        return;
+    }
+
+    if (isFullscreen(win)) {
+        win.doOperation(throwNextFullscreen);
+    } else {
+        win.doOperation(fullscreen);
+    }
+});
+
+slate.bind("s:cmd,alt", function (win) {
+    if (!win) {
+        return;
+    }
+
+    if (isPushedLeft(win)) {
+        win.doOperation(throwNextLeft);
+    } else if (isPushedRight(win)) {
+        win.doOperation(throwNextRight);
+    } else if (isFullscreen(win)) {
+        win.doOperation(throwNextFullscreen);
+    } else {
+        throwNext(win);
+    }
+});
+
+slate.bind("d:cmd,alt", function (win) {
+    if (!win) {
+        return;
+    }
+
+    if (isPushedRight(win)) {
+        win.doOperation(throwNextRight);
+    } else {
+        win.doOperation(pushRight);
+    }
+});
+
+slate.bind("a:cmd,alt", function (win) {
+    if (!win) {
+        return;
+    }
+    if (isPushedLeft(win)) {
+        win.doOperation(throwNextLeft);
+    } else {
+        win.doOperation(pushLeft);
+    }
+});
+
+slate.bind("d:cmd,alt,shift", function (win) {
+    if (!win) {
+        return;
+    }
+
+    if (isTopRightCornered(win)) {
+        win.doOperation(nextTopRightCorner);
+    } else {
+        win.doOperation(topRightCorner);
+    }
+});
+
+slate.bind("d:cmd,alt,ctrl", function (win) {
+    if (!win) {
+        return;
+    }
+
+    if (isBottomRightCornered(win)) {
+        win.doOperation(nextBottomRightCorner);
+    } else {
+        win.doOperation(bottomRightCorner);
+    }
+});
+
+slate.bind("a:cmd,alt,ctrl", function (win) {
+    if (!win) {
+        return;
+    }
+
+    if (isBottomLeftCornered(win)) {
+        win.doOperation(nextBottomLeftCorner);
+    } else {
+        win.doOperation(bottomLeftCorner);
+    }
+});
+
+slate.bind("a:cmd,alt,shift", function (win) {
+    if (!win) {
+        return;
+    }
+
+    if (isTopLeftCornered(win)) {
+        win.doOperation(nextTopLeftCorner);
+    } else {
+        win.doOperation(topLeftCorner);
+    }
+});
+
 slate.bind("tab:cmd,alt", function (win) {
     if (!win) {
         return;

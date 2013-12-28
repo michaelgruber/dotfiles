@@ -25,6 +25,10 @@ chruby ruby-2.0
 source .aliases
 
 
+# Aliases
+source .aliases
+
+
 #
 # MAC ONLY
 #
