@@ -22,6 +22,10 @@
 .Trash/
 .vagrant.d/
 .viminfo
+.cache/
+.config/
+.npm/
+.pow
 
 
 #
