@@ -16,20 +16,11 @@ GIT_PS1_SHOWCOLORHINTS=1
 GIT_PS1_SHOWUPSTREAM="auto"
 PROMPT_COMMAND='__git_ps1 "\[\033[1m\]\w\[\033[0m\]" ": "'
 
-# Chruby
-source /usr/local/share/chruby/chruby.sh # enable chruby
-source /usr/local/share/chruby/auto.sh   # enable auto-switching
-chruby ruby-2.0
-
-# Git Annex
-export PATH="/Applications/git-annex.app/Contents/MacOS:$PATH"
-
 # Aliases
 source .aliases
 
-
-# Aliases
-source .aliases
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 
 #
@@ -44,6 +35,9 @@ if [[ $OSTYPE == darwin* ]]; then
 
     # Use MacVim default (vi for vanilla vim)
     alias vim='mvim'
+
+    # Git Annex
+    export PATH="/Applications/git-annex.app/Contents/MacOS:$PATH"
 fi
 
 

@@ -25,16 +25,19 @@
 .powconfig
 .powenv
 .powrc
+.profile
 .rnd
-.rubies/
 .rvm/
 .ssh/
 .sbt/
 .st3
+.subversion/
 .Trash/
 .vagrant.d/
 .viminfo
 .vimundo/
+.zlogin
+.zshrc
 
 
 #
