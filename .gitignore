@@ -9,8 +9,10 @@
 .config/
 .conscript/
 .cups
+.dbshell
 .dropbox/
 .fontconfig/
+.forever/
 .gem/
 .gnupg/
 .guard_history
@@ -18,6 +20,7 @@
 .irb-history
 .ivy2
 .local/
+.mongorc.js
 .netrc
 .node-gyp/
 .npm/
