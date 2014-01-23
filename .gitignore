@@ -3,29 +3,44 @@
 #
 
 .bash_history
+.bundler/
+.cache/
 .CFUserTextEncoding
+.config/
+.conscript/
 .cups
+.dbshell
 .dropbox/
 .fontconfig/
+.forever/
 .gem/
 .gnupg/
 .guard_history
 .heroku/
 .irb-history
+.ivy2
 .local/
+.mongorc.js
+.netrc
+.node-gyp/
+.npm/
+.pow
+.powconfig
+.powenv
+.powrc
+.profile
 .rnd
-.rubies/
 .rvm/
 .ssh/
 .sbt/
 .st3
+.subversion/
 .Trash/
 .vagrant.d/
 .viminfo
-.cache/
-.config/
-.npm/
-.pow
+.vimundo/
+.zlogin
+.zshrc
 
 
 #
@@ -33,6 +48,7 @@
 #
 
 Applications/
+Applications (Parallels)/
 Desktop/
 Documents/
 Downloads/
