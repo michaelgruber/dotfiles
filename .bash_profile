@@ -35,6 +35,9 @@ if [[ $OSTYPE == darwin* ]]; then
 
     # Use MacVim default (vi for vanilla vim)
     alias vim='mvim'
+
+    # Git Annex
+    export PATH="$PATH:/Applications/git-annex.app/Contents/MacOS"
 fi
 
 
