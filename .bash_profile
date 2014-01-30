@@ -47,3 +47,13 @@ fi
 if [[ $OSTYPE == linux-gnu ]]; then
     alias vim='gvim'
 fi
+
+
+#
+#  Oracle
+#
+export DYLD_LIBRARY_PATH="/opt/oracle/instantclient_11_2"
+export SQLPATH="/opt/oracle/instantclient_11_2"
+export TNS_ADMIN="/opt/oracle/network/admin"
+export NLS_LANG="AMERICAN_AMERICA.UTF8"
+export PATH=$PATH:$DYLD_LIBRARY_PATH
