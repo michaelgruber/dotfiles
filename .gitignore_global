@@ -51,6 +51,7 @@ Thumbs.db
 capybara-*.html
 .rspec
 .rvmrc
+.ruby-gemset
 .ruby-version
 /.bundle
 /vendor/bundle
