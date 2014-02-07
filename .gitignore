@@ -36,9 +36,11 @@
 .st3
 .subversion/
 .Trash/
+.tnsnames.ora
 .vagrant.d/
 .viminfo
 .vimundo/
+.yeoman/
 .zlogin
 .zshrc
 
@@ -68,6 +70,7 @@ VirtualBox VMs/
 
 Notes
 Projects/
+Writing/
 
 
 #
