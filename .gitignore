@@ -29,6 +29,7 @@
 .powenv
 .powrc
 .profile
+.pry_history
 .rnd
 .rvm/
 .ssh/
