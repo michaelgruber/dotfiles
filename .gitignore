@@ -6,6 +6,7 @@
 .bundler/
 .cache/
 .CFUserTextEncoding
+.coffee_history
 .config/
 .conscript/
 .cups
