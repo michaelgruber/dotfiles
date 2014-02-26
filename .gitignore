@@ -20,7 +20,8 @@
 .heroku/
 .irb-history
 .ivy2
-.local/
+.local/bin/*
+!.local/bin/*.sh
 .mongorc.js
 .netrc
 .node-gyp/

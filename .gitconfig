@@ -11,6 +11,7 @@
 [alias]
 	unstage = reset HEAD --
 	last = log -1 HEAD
+	bundler = !sh ~/.local/bin/git_bundler.sh
 [cor]
 	autocrlf = false
 [diff]
