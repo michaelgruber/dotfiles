@@ -53,6 +53,9 @@ autocmd VimEnter * NERDTree | wincmd p
 " Zen Coding
 let g:user_zen_mode='a' " enable all function in all mode.
 
+" NERDTree
+let NERDTreeShowHidden=1
+
 
 "
 " OS SPECIFIC
@@ -70,6 +73,7 @@ elseif has('unix')
     " OS X
     if !v:shell_error && s:uname == "Darwin"
         set undodir=/Users/michael/.vimundo/ " Undo file dir
+        set guifont=Menlo:h13
     endif
 
     " Linux 
@@ -77,3 +81,4 @@ elseif has('unix')
         set undodir=/home/michael/.vimundo/ " Undo file dir
     endif
 endif
+
