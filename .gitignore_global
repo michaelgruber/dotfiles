@@ -51,6 +51,7 @@ Thumbs.db
 capybara-*.html
 .rspec
 .rvmrc
+.ruby-gemset
 .ruby-version
 /.bundle
 /vendor/bundle
@@ -65,3 +66,4 @@ rerun.txt
 pickle-email-*.html
 .project
 Guardfile
+.powrc

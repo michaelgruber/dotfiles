@@ -3,25 +3,49 @@
 #
 
 .bash_history
+.bundler/
+.cache/
 .CFUserTextEncoding
+.coffee_history
+.config/
+.conscript/
 .cups
+.dbshell
 .dropbox/
 .fontconfig/
+.forever/
 .gem/
 .gnupg/
 .guard_history
 .heroku/
 .irb-history
-.local/
+.ivy2
+.local/bin/*
+!.local/bin/*.sh
+.mongorc.js
+.netrc
+.node-gyp/
+.npm/
+.pow
+.powconfig
+.powenv
+.powrc
+.profile
+.pry_history
 .rnd
-.rubies/
 .rvm/
 .ssh/
 .sbt/
 .st3
+.subversion/
 .Trash/
+.tnsnames.ora
 .vagrant.d/
 .viminfo
+.vimundo/
+.yeoman/
+.zlogin
+.zshrc
 
 
 #
@@ -29,6 +53,7 @@
 #
 
 Applications/
+Applications (Parallels)/
 Desktop/
 Documents/
 Downloads/
@@ -48,6 +73,7 @@ VirtualBox VMs/
 
 Notes
 Projects/
+Writing/
 
 
 #
@@ -59,3 +85,10 @@ Projects/
 Session.vim
 .netrwhist
 *~
+
+
+#
+# Misc.
+#
+
+oradiag_*/
