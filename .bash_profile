@@ -16,17 +16,11 @@ GIT_PS1_SHOWCOLORHINTS=1
 GIT_PS1_SHOWUPSTREAM="auto"
 PROMPT_COMMAND='__git_ps1 "\[\033[1m\]\w\[\033[0m\]" ": "'
 
-# Chruby
-source /usr/local/share/chruby/chruby.sh # enable chruby
-source /usr/local/share/chruby/auto.sh   # enable auto-switching
-chruby ruby-2.0
-
 # Aliases
 source .aliases
 
-
-# Aliases
-source .aliases
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 
 #
@@ -56,7 +50,7 @@ fi
 
 
 #
-#  Oracle
+# Oracle
 #
 export DYLD_LIBRARY_PATH="/opt/oracle/instantclient_11_2"
 export SQLPATH="/opt/oracle/instantclient_11_2"

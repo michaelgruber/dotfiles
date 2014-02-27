@@ -1,5 +1,2 @@
 # General
 alias clear='clear && clear'
-
-# Projects
-alias agg='cd ~/work/agg2.5'

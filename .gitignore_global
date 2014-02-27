@@ -53,6 +53,7 @@ capybara-*.html
 .rvmrc
 .ruby-gemset
 .ruby-version
+.ruby-gemset
 /.bundle
 /vendor/bundle
 /log/*

@@ -1,7 +1,6 @@
 #
 # Dotfiles
 #
-
 .bash_history
 .bundler/
 .cache/
@@ -22,6 +21,7 @@
 .ivy2
 .local/bin/*
 !.local/bin/*.sh
+.local/share/
 .mongorc.js
 .netrc
 .node-gyp/
@@ -51,7 +51,6 @@
 #
 # OS X Folders
 #
-
 Applications/
 Applications (Parallels)/
 Desktop/
@@ -70,16 +69,15 @@ VirtualBox VMs/
 #
 # My Folders
 #
-
 Notes
 Projects/
+Source/
 Writing/
 
 
 #
 # github/gitignore vim.gitignore
 #
-
 .*.s[a-w][a-z]
 *.un~
 Session.vim
@@ -90,5 +88,4 @@ Session.vim
 #
 # Misc.
 #
-
 oradiag_*/
