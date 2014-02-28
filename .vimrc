@@ -30,6 +30,7 @@ set autoindent
 
 " Aliases
 command Nt NERDTree
+command Ntf NERDTreeFind
 
 "Syntax
 au BufRead,BufNewFile *.rabl setf ruby " Rabl
@@ -42,8 +43,12 @@ au BufRead,BufNewFile *.txt setf markdown " Markdown
 
 " sets tab width to two for specific filetypes
 autocmd FileType ruby,haml,eruby,yaml,html,sass,cucumber set tabstop=2 shiftwidth=2
+
 " opens NERDTree automatically and sets cursor to main window
 autocmd VimEnter * NERDTree | wincmd p
+
+" closes Vim if NERDTree is the last open buffer
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | enew | NERDTree | wincmd p | endif
 
 
 "
