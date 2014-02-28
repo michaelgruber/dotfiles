@@ -1,0 +1,21 @@
+'exception-reporting':
+  'userId': '07927910-4ce4-7bdc-155a-d66ca2bd8907'
+'release-notes':
+  'viewedVersion': '0.61.0'
+'welcome':
+  'showOnStartup': false
+'metrics':
+  'userId': '76f344cbcecf7d1051f6189075b2a231bc18ebe3'
+'editor':
+  'fontSize': 13
+  'fontFamily': 'Menlo'
+'core':
+  'themes': [
+    'atom-light-ui'
+    'solarized-light-syntax'
+  ]
+  'ignoredNames': [
+    '.git'
+    '.svn'
+    '.DS_Store'
+  ]

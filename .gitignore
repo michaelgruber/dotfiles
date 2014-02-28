@@ -1,6 +1,8 @@
 #
 # Dotfiles
 #
+.atom/.node-gyp
+.atom/storage
 .bash_history
 .bundler/
 .cache/

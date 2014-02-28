@@ -68,3 +68,8 @@ pickle-email-*.html
 .project
 Guardfile
 .powrc
+
+# Node #
+########
+.grunt
+node_modules

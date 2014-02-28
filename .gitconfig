@@ -2,7 +2,7 @@
 	name = Michael Gruber
 	email = mail@michaelgruber.me
 [core]
-	editor = "subl -n -w"
+	editor = "atom -n -w"
 	excludesfile = ~/.gitignore_global
 [color]
 	ui = true
