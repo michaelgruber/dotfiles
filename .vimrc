@@ -8,6 +8,7 @@ set ruler        " Cursor location
 set undofile     " Use undo file (>=7.3)
 set hidden       " Hide buffer instead of closing
 set spell        " Spell checker
+set antialias    " Turn on font antialiasing
 
 syntax enable
 filetype indent plugin on
@@ -42,7 +43,7 @@ au BufRead,BufNewFile *.txt setf markdown " Markdown
 "
 
 " sets tab width to two for specific filetypes
-autocmd FileType ruby,haml,eruby,yaml,html,sass,cucumber set tabstop=2 shiftwidth=2
+autocmd FileType ruby,haml,eruby,yaml,html,sass,cucumber,coffee set tabstop=2 shiftwidth=2
 
 " opens NERDTree automatically and sets cursor to main window
 autocmd VimEnter * NERDTree | wincmd p
