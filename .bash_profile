@@ -27,7 +27,6 @@ source .aliases
 # MAC ONLY
 #
 if [[ $OSTYPE == darwin* ]]; then
-
     # Git autocompletion
     if [ -f `brew --prefix`/etc/bash_completion ]; then
         . `brew --prefix`/etc/bash_completion
@@ -37,7 +36,7 @@ if [[ $OSTYPE == darwin* ]]; then
     alias vim='mvim'
 
     # Git Annex
-    export PATH="$PATH:/Applications/git-annex.app/Contents/MacOS"
+    export PATH="/Applications/git-annex.app/Contents/MacOS:$PATH"
 fi
 
 
