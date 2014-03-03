@@ -67,7 +67,6 @@ let NERDTreeShowHidden=1
 " OS SPECIFIC
 "
 
-
 " Windows
 if has('win32')
     cd ~
