@@ -29,6 +29,9 @@ set expandtab " soft tabs
 set smartindent
 set autoindent
 
+" Leader
+let mapleader = ","
+
 " Aliases
 command Nt NERDTree
 command Ntf NERDTreeFind
