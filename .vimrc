@@ -20,6 +20,8 @@ execute pathogen#infect()
 " Color Scheme
 set background=light
 colorscheme solarized
+set textwidth=80
+set colorcolumn=+1
 
 " Indentation
 set tabstop=4
