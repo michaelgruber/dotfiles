@@ -31,6 +31,9 @@ set expandtab " soft tabs
 set smartindent
 set autoindent
 
+" Text
+set wrap nowrap
+
 " Leader
 let mapleader = ","
 
