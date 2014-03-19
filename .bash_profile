@@ -36,7 +36,7 @@ if [[ $OSTYPE == darwin* ]]; then
     alias vim='mvim'
 
     # Git Annex
-    export PATH="/Applications/git-annex.app/Contents/MacOS:$PATH"
+    export PATH="$PATH:/Applications/git-annex.app/Contents/MacOS"
 fi
 
 
