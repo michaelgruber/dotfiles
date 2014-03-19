@@ -64,6 +64,7 @@ let g:user_zen_mode='a' " enable all function in all mode.
 
 " NERDTree
 let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['\.swp$', '\.swo$', '\.keep$', '\.DS_Store$']
 
 
 "
