@@ -37,6 +37,10 @@ if [[ $OSTYPE == darwin* ]]; then
 
     # Git Annex
     export PATH="$PATH:/Applications/git-annex.app/Contents/MacOS"
+
+    # Oracle
+    export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:/opt/oracle/instantclient_11_2"
+    export PATH=$PATH:$DYLD_LIBRARY_PATH
 fi
 
 
@@ -51,8 +55,6 @@ fi
 #
 # Oracle
 #
-export DYLD_LIBRARY_PATH="/opt/oracle/instantclient_11_2"
 export SQLPATH="/opt/oracle/instantclient_11_2"
 export TNS_ADMIN="/opt/oracle/network/admin"
 export NLS_LANG="AMERICAN_AMERICA.UTF8"
-export PATH=$PATH:$DYLD_LIBRARY_PATH
