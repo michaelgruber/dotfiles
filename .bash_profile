@@ -38,6 +38,9 @@ if [[ $OSTYPE == darwin* ]]; then
     # Git Annex
     export PATH="$PATH:/Applications/git-annex.app/Contents/MacOS"
 
+    # Boot2docker
+    export DOCKER_HOST=tcp://localhost:4243
+
     # Oracle
     export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:/opt/oracle/instantclient_11_2"
     export PATH=$PATH:$DYLD_LIBRARY_PATH
