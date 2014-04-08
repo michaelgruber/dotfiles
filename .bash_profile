@@ -37,6 +37,9 @@ if [[ $OSTYPE == darwin* ]]; then
 
     # Git Annex
     export PATH="$PATH:/Applications/git-annex.app/Contents/MacOS"
+
+    # Boot2docker
+    export DOCKER_HOST=tcp://localhost:4243
 fi
 
 

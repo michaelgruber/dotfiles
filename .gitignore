@@ -4,6 +4,7 @@
 .atom/.node-gyp
 .atom/storage
 .bash_history
+.boot2docker/
 .bundler/
 .cache/
 .CFUserTextEncoding
