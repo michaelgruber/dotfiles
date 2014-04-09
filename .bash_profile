@@ -3,7 +3,7 @@
 #
 
 # Add bins to to the `$PATH`
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.local/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # Git info for bash prompt
 source ~/.git-prompt.sh
@@ -15,6 +15,9 @@ GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWCOLORHINTS=1
 GIT_PS1_SHOWUPSTREAM="auto"
 PROMPT_COMMAND='__git_ps1 "\[\033[1m\]\w\[\033[0m\]" ": "'
+
+# Source all scripts
+for FILE in .bin/* ; do source $FILE ; done
 
 # Aliases
 source .aliases
