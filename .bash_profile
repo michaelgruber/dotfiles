@@ -17,10 +17,10 @@ GIT_PS1_SHOWUPSTREAM="auto"
 PROMPT_COMMAND='__git_ps1 "\[\033[1m\]\w\[\033[0m\]" ": "'
 
 # Source all scripts
-for FILE in .bin/* ; do source $FILE ; done
+for FILE in ~/.bin/* ; do source $FILE ; done
 
 # Aliases
-source .aliases
+source ~/.aliases
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
