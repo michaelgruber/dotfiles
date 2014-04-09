@@ -1,2 +1,4 @@
 # General
 alias clear='clear && clear'
+alias gkill='grep_kill'
+alias kdev='gkill dev_staging'
