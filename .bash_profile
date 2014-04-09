@@ -35,8 +35,8 @@ if [[ $OSTYPE == darwin* ]]; then
         . `brew --prefix`/etc/bash_completion
     fi
 
-    # Use MacVim default (vi for vanilla vim)
-    alias vim='mvim'
+    # MacVim
+    export VISUAL='mvim -f'
 
     # Git Annex
     export PATH="$PATH:/Applications/git-annex.app/Contents/MacOS"
@@ -47,6 +47,9 @@ if [[ $OSTYPE == darwin* ]]; then
     # Oracle
     export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:/opt/oracle/instantclient_11_2"
     export PATH=$PATH:$DYLD_LIBRARY_PATH
+
+    # Mac Aliases
+    alias vim='mvim' # use 'vi' to use vim in terminal
 fi
 
 
