@@ -34,6 +34,10 @@ set autoindent
 " Text
 set wrap nowrap
 
+" Recovery & Backup
+set directory=~/.vim/swap,.
+set backupdir=~/.vim/swap,.
+
 " Leader
 let mapleader = ","
 

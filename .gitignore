@@ -45,6 +45,7 @@
 .Trash/
 .tnsnames.ora
 .vagrant.d/
+.vim/swap
 .viminfo
 .vimundo/
 .yeoman/
