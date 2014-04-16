@@ -58,3 +58,15 @@
 [submodule ".vim/bundle/EasyGrep"]
 	path = .vim/bundle/EasyGrep
 	url = https://github.com/vim-scripts/EasyGrep.git
+[submodule ".vim/bundle/mustache"]
+	path = .vim/bundle/mustache
+	url = git://github.com/mustache/vim-mustache-handlebars.git
+[submodule ".vim/bundle/vim-fireplace"]
+	path = .vim/bundle/vim-fireplace
+	url = git://github.com/tpope/vim-fireplace.git
+[submodule ".vim/bundle/vim-clojure-static"]
+	path = .vim/bundle/vim-clojure-static
+	url = git://github.com/guns/vim-clojure-static.git
+[submodule ".vim/bundle/vim-classpath"]
+	path = .vim/bundle/vim-classpath
+	url = git://github.com/tpope/vim-classpath.git

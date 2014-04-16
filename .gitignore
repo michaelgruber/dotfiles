@@ -23,9 +23,11 @@
 .heroku/
 .irb-history
 .ivy2
+.lein/
 .local/bin/*
 !.local/bin/*.sh
 .local/share/
+.m2/
 .mongorc.js
 .netrc
 .node-gyp/
