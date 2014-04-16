@@ -1,8 +1,9 @@
 #
 # Dotfiles
 #
-.atom/.node-gyp
+.atom/packages
 .atom/storage
+.atom/themes
 .bash_history
 .boot2docker/
 .bundler/
