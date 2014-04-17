@@ -73,3 +73,6 @@
 [submodule ".vim/bundle/vim-colors-solarized"]
 	path = .vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule ".vim/bundle/fsharp-vim"]
+	path = .vim/bundle/fsharp-vim
+	url = git://github.com/kongo2002/fsharp-vim.git

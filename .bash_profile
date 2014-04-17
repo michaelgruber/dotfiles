@@ -50,6 +50,9 @@ if [[ $OSTYPE == darwin* ]]; then
 
     # Mac Aliases
     alias vim='mvim' # use 'vi' to use vim in terminal
+
+    # Mono
+    export MONO_GAC_PREFIX="/usr/local"
 fi
 
 
