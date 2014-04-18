@@ -83,7 +83,7 @@ let NERDTreeIgnore = ['\.swp$', '\.swo$', '\.keep$', '\.DS_Store$']
 
 " Windows
 if has('win32')
-    set guifont=Courier\ New
+    set guifont=Consolas:h11
     cd E:\Src
     set undodir=E:\Michael\_vimundo\ " Undo file dir
     set directory=E:\Src\.vim\swap,.
