@@ -32,7 +32,9 @@ set smartindent
 set autoindent
 
 " Text
-set wrap nowrap
+set wrap
+set linebreak
+set nolist
 
 " Recovery & Backup
 set directory=~/.vim/swap,.
