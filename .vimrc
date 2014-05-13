@@ -50,7 +50,6 @@ command Ntf NERDTreeFind
 "Syntax
 au BufRead,BufNewFile *.rabl setf ruby " Rabl
 au BufRead,BufNewFile *.txt setf markdown " Markdown
-set t_Co=256
 
 
 "
@@ -86,10 +85,10 @@ let NERDTreeIgnore = ['\.swp$', '\.swo$', '\.keep$', '\.DS_Store$']
 " Windows
 if has('win32')
     set guifont=Consolas:h11
-    cd E:\Src
     set undodir=E:\Michael\_vimundo\ " Undo file dir
-    set directory=E:\Src\.vim\swap,.
-    set backupdir=E:\Src\.vim\swap,.
+    set directory=E:\Src\dotfiles\.vim\swap,.
+    set backupdir=E:\Src\dotfiles\.vim\swap,.
+    let g:instant_markdown_autostart=0
 elseif has('unix')
     let s:uname = system("echo -n \"$(uname)\"") " get OS type
 
