@@ -57,13 +57,7 @@ au BufRead,BufNewFile *.txt setf markdown " Markdown
 "
 
 " sets tab width to two for specific filetypes
-autocmd FileType ruby,haml,eruby,yaml,html,sass,cucumber,coffee set tabstop=2 shiftwidth=2
-
-" opens NERDTree automatically and sets cursor to main window
-autocmd VimEnter * NERDTree | wincmd p
-
-" closes Vim if NERDTree is the last open buffer
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | enew | NERDTree | wincmd p | endif
+autocmd FileType ruby,haml,eruby,yaml,html,scss,cucumber,coffee set tabstop=2 shiftwidth=2
 
 
 "
@@ -74,6 +68,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 let g:user_zen_mode='a' " enable all function in all mode.
 
 " NERDTree
+map <C-i> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.swp$', '\.swo$', '\.keep$', '\.DS_Store$']
 
