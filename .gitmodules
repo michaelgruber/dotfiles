@@ -1,42 +1,18 @@
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vim/bundle/vim-fugitive"]
-	path = .vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
 [submodule ".vim/bundle/vim-markdown"]
 	path = .vim/bundle/vim-markdown
 	url = https://github.com/tpope/vim-markdown.git
-[submodule ".vim/bundle/vim-bundler"]
-	path = .vim/bundle/vim-bundler
-	url = https://github.com/tpope/vim-bundler.git
 [submodule ".vim/bundle/vim-rails"]
 	path = .vim/bundle/vim-rails
 	url = https://github.com/tpope/vim-rails.git
-[submodule ".vim/bundle/vim-less"]
-	path = .vim/bundle/vim-less
-	url = https://github.com/groenewege/vim-less.git
 [submodule ".vim/bundle/vim-instant-markdown"]
 	path = .vim/bundle/vim-instant-markdown
 	url = https://github.com/suan/vim-instant-markdown.git
 [submodule ".vim/bundle/vim-ruby"]
 	path = .vim/bundle/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
-[submodule ".vim/bundle/supertab"]
-	path = .vim/bundle/supertab
-	url = https://github.com/ervandew/supertab.git
-[submodule ".vim/bundle/tlib_vim"]
-	path = .vim/bundle/tlib_vim
-	url = https://github.com/tomtom/tlib_vim.git
-[submodule ".vim/bundle/vim-addon-mw-utils"]
-	path = .vim/bundle/vim-addon-mw-utils
-	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
-[submodule ".vim/bundle/vim-snipmate"]
-	path = .vim/bundle/vim-snipmate
-	url = https://github.com/garbas/vim-snipmate.git
-[submodule ".vim/bundle/vim-snippets"]
-	path = .vim/bundle/vim-snippets
-	url = https://github.com/honza/vim-snippets.git
 [submodule ".vim/bundle/vim-surround"]
 	path = .vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
@@ -61,18 +37,6 @@
 [submodule ".vim/bundle/mustache"]
 	path = .vim/bundle/mustache
 	url = git://github.com/mustache/vim-mustache-handlebars.git
-[submodule ".vim/bundle/vim-fireplace"]
-	path = .vim/bundle/vim-fireplace
-	url = git://github.com/tpope/vim-fireplace.git
-[submodule ".vim/bundle/vim-clojure-static"]
-	path = .vim/bundle/vim-clojure-static
-	url = git://github.com/guns/vim-clojure-static.git
-[submodule ".vim/bundle/vim-classpath"]
-	path = .vim/bundle/vim-classpath
-	url = git://github.com/tpope/vim-classpath.git
 [submodule ".vim/bundle/vim-colors-solarized"]
 	path = .vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule ".vim/bundle/fsharp-vim"]
-	path = .vim/bundle/fsharp-vim
-	url = git://github.com/kongo2002/fsharp-vim.git
