@@ -68,9 +68,12 @@ autocmd FileType ruby,haml,eruby,yaml,html,scss,cucumber,coffee set tabstop=2 sh
 let g:user_zen_mode='a' " enable all function in all mode.
 
 " NERDTree
-map <C-i> :NERDTreeToggle<CR>
+map <C-j> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.swp$', '\.swo$', '\.keep$', '\.DS_Store$']
+
+" Tagbar
+map <C-k> :TagbarToggle<CR>
 
 
 "
@@ -98,4 +101,3 @@ elseif has('unix')
         set undodir=/home/michael/.vimundo/ " Undo file dir
     endif
 endif
-
