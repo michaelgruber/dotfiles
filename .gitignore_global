@@ -43,6 +43,7 @@ Thumbs.db
 *.swp
 *.swo
 *.swn
+tags
 
 # Rails #
 #########
@@ -69,6 +70,7 @@ pickle-email-*.html
 .project
 Guardfile
 .powrc
+.powenv
 
 # Node #
 ########
