@@ -25,6 +25,9 @@ source ~/.aliases
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# Add doctorjs to NODE_PATH for use with Tagbar/CTags
+NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
+
 
 #
 # MAC ONLY
