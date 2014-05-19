@@ -30,6 +30,7 @@
 .local/share/
 .m2/
 .mongorc.js
+.NERDTreeBookmarks
 .netrc
 .node-gyp/
 .npm/

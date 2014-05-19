@@ -46,6 +46,7 @@ let mapleader = ","
 " Aliases
 command Nt NERDTree
 command Ntf NERDTreeFind
+command Bm Bookmark
 
 "Syntax
 au BufRead,BufNewFile *.rabl setf ruby " Rabl
