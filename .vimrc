@@ -9,6 +9,7 @@ set undofile     " Use undo file (>=7.3)
 set hidden       " Hide buffer instead of closing
 set spell        " Spell checker
 set antialias    " Turn on font antialiasing
+set t_Co=256     " 256 colors if terminal supports it
 
 syntax enable
 filetype indent plugin on
