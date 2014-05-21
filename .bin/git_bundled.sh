@@ -1,4 +1,5 @@
 #!/bin/sh
+
 DEST=~/Dropbox/Git\ Backups/
 REPO=$(basename "`git rev-parse --show-toplevel`")
 

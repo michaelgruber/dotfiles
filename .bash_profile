@@ -1,5 +1,5 @@
 #
-# GENERAL
+# ENVIRONMENT
 #
 
 # Add bins to to the `$PATH`
@@ -80,5 +80,10 @@ for FILE in ~/.bin/* ; do source $FILE ; done
 # Aliases
 source ~/.aliases
 
-# Execute startup scripts
-for FILE in ~/.startup/* ; do bash $FILE ; done
+
+#
+# STARTUP
+#
+
+# Check for missing applications
+run_install_list_check

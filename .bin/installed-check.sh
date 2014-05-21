@@ -1,3 +1,5 @@
+#!/bin/sh
+
 declare -A DEPS=(
     ["rvm"]="Follow instructions at http://rvm.io/rvm/install"
     ["jsctags"]="required for vim Tagbar plugin 'git clone https://github.com/faceleg/doctorjs.git', 'git submodule update --init --recursive', and 'sudo make install'."
@@ -13,36 +15,37 @@ declare -A MAC_DEPS=(
 
 
 missing=()
-__check_dep_list() {
+
+__check_dep_list () {
     [[ -z "$1" ]] && list="DEPS" || list="${1}_DEPS"
 
     for dep in $(eval echo "\${!$list[@]}") ; do
-        if !(eval "command -v $dep >/dev/null 2>&1"); then
+        if (! eval "command -v $dep >/dev/null 2>&1") ; then
             missing+=("Can't find \"$dep\" $(eval echo "\${$list["$dep"]}")")
         fi
     done
 }
 
+__print_misses () {
+    if [ ${#missing[@]} -ne 0 ]; then
+        printf "\nScheiße! Missing programs!"
+        printf "\n===========================\n"
 
-# *nix
-__check_dep_list
+        for miss in "${missing[@]}"; do echo "$miss" ; done
 
-# OS X
-if [[ $OSTYPE == darwin* ]]; then
-    __check_dep_list 'MAC'
-fi
+        printf "\n"
+    fi
+}
 
-# Linux
-#if [[ $OSTYPE == linux-gnu ]]; then
-#fi
+run_install_list_check () {
+    # *nix
+    __check_dep_list
 
+    # OS X
+    if [[ $OSTYPE == darwin* ]] ; then __check_dep_list 'MAC' ; fi
 
-# Print out missing programs if any exits
-if [ ${#missing[@]} -ne 0 ]; then 
-    printf "\nScheiße! Missing programs!"
-    printf "\n===========================\n"
+    # Linux
+    #if [[ $OSTYPE == linux-gnu ]] ; then __check_dep_list 'LINUX' ; fi
 
-    for miss in "${missing[@]}"; do echo "$miss" ; done
-
-    printf "\n"
-fi
+    __print_misses
+}

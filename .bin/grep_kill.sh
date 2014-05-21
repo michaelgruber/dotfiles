@@ -1,3 +1,5 @@
+#!/bin/sh
+
 __processes=''
 
 __grep_process () {
