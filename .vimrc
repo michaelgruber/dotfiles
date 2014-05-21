@@ -47,6 +47,7 @@ let mapleader = ","
 command Nt NERDTree
 command Ntf NERDTreeFind
 command Bm Bookmark
+command Cbm ClearAllBookmarks
 
 "Syntax
 au BufRead,BufNewFile *.rabl setf ruby " Rabl
