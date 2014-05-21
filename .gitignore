@@ -16,12 +16,14 @@
 .dbshell
 .dropbox/
 .dropbox-master/
+.filezilla/
 .fontconfig/
 .forever/
 .gem/
 .gnupg/
 .guard_history
 .heroku/
+.inkscape-etc/
 .irb-history
 .ivy2
 .lein/
