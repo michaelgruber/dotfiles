@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/CoffeeTags"]
 	path = .vim/bundle/CoffeeTags
 	url = https://github.com/lukaszkorecki/CoffeeTags
+[submodule ".vim/bundle/vim-rspec"]
+	path = .vim/bundle/vim-rspec
+	url = https://github.com/thoughtbot/vim-rspec.git

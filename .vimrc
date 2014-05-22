@@ -78,6 +78,12 @@ let NERDTreeIgnore = ['\.swp$', '\.swo$', '\.keep$', '\.DS_Store$']
 " Tagbar
 map <C-k> :TagbarToggle<CR>
 
+" Vim-Rspec
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
 
 "
 " OS SPECIFIC
@@ -97,6 +103,9 @@ elseif has('unix')
     if !v:shell_error && s:uname == "Darwin"
         set undodir=/Users/michael/.vimundo/ " Undo file dir
         set guifont=Menlo:h13
+
+        " Vim-Rspec
+        let g:rspec_runner = "os_x_iterm"
     endif
 
     " Linux 
