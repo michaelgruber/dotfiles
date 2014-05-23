@@ -11,6 +11,7 @@ declare -A MAC_DEPS=(
     ["mvim"]="'brew install macvim --override-system-vim', and 'brew linkapps'"
     ["git"]="How can this be? 'brew install git'"
     ["ctags"]="required for vim Tagbar plugin 'brew install ctags-exuberant'"
+    ["direnv"]="Helps with adding bin/ binstubs to path on a project to project basis, 'brew install direnv'"
 )
 
 

@@ -21,8 +21,7 @@ execute pathogen#infect()
 " Color Scheme
 set background=light
 colorscheme solarized
-set textwidth=80
-set colorcolumn=+1
+set colorcolumn=80
 
 " Indentation
 set tabstop=4
@@ -36,10 +35,14 @@ set autoindent
 set wrap
 set linebreak
 set nolist
+set textwidth=0
+set wrapmargin=0
 
 " Recovery & Backup
 set directory=~/.vim/swap,.
 set backupdir=~/.vim/swap,.
+
+set shortmess+=A " no swap exists messages
 
 " Leader
 let mapleader = ","

@@ -76,3 +76,7 @@ Guardfile
 ########
 .grunt
 node_modules
+
+# Bash #
+########
+.envrc
