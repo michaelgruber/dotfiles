@@ -20,6 +20,7 @@
 .fontconfig/
 .forever/
 .gem/
+.gist-vim
 .gnupg/
 .guard_history
 .heroku/

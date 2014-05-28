@@ -87,6 +87,11 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
+" Gist-Vim
+let g:gist_detect_filetype = 1
+let g:gist_post_private = 1
+let g:gist_show_privates = 1
+
 
 "
 " OS SPECIFIC
@@ -109,6 +114,9 @@ elseif has('unix')
 
         " Vim-Rspec
         let g:rspec_runner = "os_x_iterm"
+
+        " Gist-Vim
+        let g:gist_clip_command = 'pbcopy'
     endif
 
     " Linux 

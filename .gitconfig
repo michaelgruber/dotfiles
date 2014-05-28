@@ -20,3 +20,5 @@
 	prompt = false
 [push]
 	default = simple
+[github]
+	user = michaelgruber
