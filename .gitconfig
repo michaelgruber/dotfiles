@@ -11,7 +11,7 @@
 [alias]
 	unstage = reset HEAD --
 	last = log -1 HEAD
-	bundled = !sh ~/.bin/git_bundled.sh
+	bundled = !bash -c '(git_bundled)' -
 [cor]
 	autocrlf = false
 [diff]
