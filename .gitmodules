@@ -52,3 +52,6 @@
 [submodule ".vim/bundle/webapi-vim"]
 	path = .vim/bundle/webapi-vim
 	url = https://github.com/mattn/webapi-vim.git
+[submodule ".vim/bundle/vim-eco"]
+	path = .vim/bundle/vim-eco
+	url = https://github.com/AndrewRadev/vim-eco.git
