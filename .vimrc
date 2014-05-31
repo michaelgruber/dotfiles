@@ -27,9 +27,7 @@ set colorcolumn=80
 set tabstop=4
 set shiftwidth=4
 set expandtab " soft tabs
-
 set smartindent
-set autoindent
 
 " Text
 set wrap
