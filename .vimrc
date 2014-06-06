@@ -98,7 +98,6 @@ if has('win32')
     set undodir=C:\Users\Michael\Dev\dotfiles\.vim\vimundo " Undo file dir
     set directory=C:\Users\Michael\Dev\dotfiles\.vim\swap,.
     set backupdir=C:\Users\Michael\Dev\dotfiles\.vim\swap,.
-    let g:instant_markdown_autostart=0
 elseif has('unix')
     let s:uname = system("echo -n \"$(uname)\"") " get OS type
 
