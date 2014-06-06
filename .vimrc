@@ -1,22 +1,58 @@
 "
-" GENERAL 
+" NEOBUNDLE
 "
 
-set nocompatible " Turns off vi compatibility
-set number       " Line numbers
-set ruler        " Cursor location
-set undofile     " Use undo file (>=7.3)
-set hidden       " Hide buffer instead of closing
-set spell        " Spell checker
-set antialias    " Turn on font antialiasing
-set t_Co=256     " 256 colors if terminal supports it
+if has('vim_starting')
+    set nocompatible " turns off vi compatibility (Be iMproved lol)
 
-syntax enable
+    set runtimepath+=.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#begin(expand('.vim/bundle/'))
+
+" let NeoBundle manage itself - required
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Bundles
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'AndrewRadev/vim-eco'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'mattn/gist-vim'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler.vim'
+NeoBundle 'Shougo/vimproc.vim'
+NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'thoughtbot/vim-rspec'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'tpope/vim-pathogen'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-ruby/vim-ruby'
+
+call neobundle#end()
+
 filetype indent plugin on
 
-" Pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
+NeoBundleCheck " prompt to install missing bundles
+
+
+"
+" GENERAL
+"
+
+syntax enable
+
+set nocompatible
+set number       " line numbers
+set ruler        " cursor location
+set undofile     " use undo file (>=7.3)
+set hidden       " hide buffer instead of closing
+set spell        " spell checker
+set antialias    " turn on font antialiasing
+set t_Co=256     " 256 colors if terminal supports it
 
 " Color Scheme
 set background=light
@@ -46,10 +82,7 @@ set shortmess+=A " no swap exists messages
 let mapleader = ","
 
 " Aliases
-command Nt NERDTree
-command Ntf NERDTreeFind
-command Bm Bookmark
-command Cbm ClearAllBookmarks
+command Un Unite
 
 "Syntax
 au BufRead,BufNewFile *.rabl setf ruby " Rabl
@@ -68,24 +101,27 @@ autocmd FileType ruby,haml,eruby,yaml,html,scss,cucumber,coffee set tabstop=2 sh
 " PLUGINS
 "
 
-" Zen Coding
-let g:user_zen_mode='a' " enable all function in all mode.
+" Gist-vim
+let g:gist_detect_filetype = 1
+let g:gist_post_private = 1
+let g:gist_show_privates = 1
 
-" NERDTree
-map <C-j> :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
-let NERDTreeIgnore = ['\.swp$', '\.swo$', '\.keep$', '\.DS_Store$']
+" Unite.vim
+let g:unite_source_history_yank_enable = 1
+nnoremap <C-y> :Unite history/yank<CR>
+nnoremap <C-h> :Unite -quick-match -silent -auto-resize buffer<CR>
+nnoremap <C-k> :Unite -silent -auto-resize file_rec/async<CR>
+nnoremap <C-l> :Unite -silent -auto-resize grep:.<CR>
 
-" Vim-Rspec
+" VimFiler
+let g:vimfiler_as_default_explorer = 1
+nnoremap <C-j> :VimFilerExplorer<CR>
+
+" Vim-rspec
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
-
-" Gist-Vim
-let g:gist_detect_filetype = 1
-let g:gist_post_private = 1
-let g:gist_show_privates = 1
 
 
 "
@@ -95,7 +131,7 @@ let g:gist_show_privates = 1
 " Windows
 if has('win32')
     set guifont=Consolas:h11
-    set undodir=C:\Users\Michael\Dev\dotfiles\.vim\vimundo " Undo file dir
+    set undodir=C:\Users\Michael\Dev\dotfiles\.vim\vimundo
     set directory=C:\Users\Michael\Dev\dotfiles\.vim\swap,.
     set backupdir=C:\Users\Michael\Dev\dotfiles\.vim\swap,.
 elseif has('unix')
@@ -103,7 +139,7 @@ elseif has('unix')
 
     " OS X
     if !v:shell_error && s:uname == "Darwin"
-        set undodir=/Users/michael/.vimundo/ " Undo file dir
+        set undodir=/Users/michael/.vimundo/
         set guifont=Menlo:h13
 
         " Vim-Rspec
@@ -115,6 +151,6 @@ elseif has('unix')
 
     " Linux 
     if !v:shell_error && s:uname == "Linux"
-        set undodir=/home/michael/.vimundo/ " Undo file dir
+        set undodir=/home/michael/.vimundo/
     endif
 endif

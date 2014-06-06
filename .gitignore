@@ -103,3 +103,8 @@ Session.vim
 # Misc.
 #
 oradiag_*/
+
+#
+# Vim - NeoBundle
+#
+.vim/bundle/*
