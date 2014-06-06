@@ -76,9 +76,6 @@ map <C-j> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.swp$', '\.swo$', '\.keep$', '\.DS_Store$']
 
-" Tagbar
-map <C-k> :TagbarToggle<CR>
-
 " Vim-Rspec
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
