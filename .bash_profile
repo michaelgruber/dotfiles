@@ -5,11 +5,6 @@
 # Add bins to to the `$PATH`
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
-# Check bash version
-if [[ ${BASH_VERSION:0:1} != "4" ]]; then
-    printf "\nWARNING:\nIt doesn't look like you have Bash 4 installed. You might see some weirdness.\n\n"
-fi
-
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
@@ -79,11 +74,3 @@ for FILE in ~/.bin/* ; do source $FILE ; done
 
 # Aliases
 source ~/.aliases
-
-
-#
-# STARTUP
-#
-
-# Check for missing applications
-run_install_list_check
