@@ -2,13 +2,21 @@
 " NEOBUNDLE
 "
 
-if has('vim_starting')
-    set nocompatible " turns off vi compatibility (Be iMproved lol)
+set nocompatible " turns off vi compatibility (Be iMproved lol)
 
-    set runtimepath+=.vim/bundle/neobundle.vim/
+if has('win32')
+    if has('vim_starting')
+        set runtimepath+=C:\Users\Michael\Dev\dotfiles\.vim\bundle\neobundle.vim
+    endif
+
+    call neobundle#begin(expand('C:\Users\Michael\Dev\dotfiles\.vim\bundle\'))
+else
+    if has('vim_starting')
+        set runtimepath+=.vim/bundle/neobundle.vim/
+    endif
+
+    call neobundle#begin(expand('.vim/bundle/'))
 endif
-
-call neobundle#begin(expand('.vim/bundle/'))
 
 " let NeoBundle manage itself - required
 NeoBundleFetch 'Shougo/neobundle.vim'
