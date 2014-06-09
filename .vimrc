@@ -6,10 +6,10 @@ set nocompatible " turns off vi compatibility (Be iMproved lol)
 
 if has('win32')
     if has('vim_starting')
-        set runtimepath+=C:\Users\Michael\Dev\dotfiles\.vim\bundle\neobundle.vim
+        set runtimepath+=C:\Dev\dotfiles\.vim\bundle\neobundle.vim
     endif
 
-    call neobundle#begin(expand('C:\Users\Michael\Dev\dotfiles\.vim\bundle\'))
+    call neobundle#begin(expand('C:\Dev\dotfiles\.vim\bundle\'))
 else
     if has('vim_starting')
         set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -53,7 +53,6 @@ NeoBundleCheck " prompt to install missing bundles
 
 syntax enable
 
-set nocompatible
 set number       " line numbers
 set ruler        " cursor location
 set undofile     " use undo file (>=7.3)
@@ -103,6 +102,7 @@ au BufRead,BufNewFile *.txt setf markdown " Markdown
 
 " sets tab width to two for specific filetypes
 autocmd FileType ruby,haml,eruby,yaml,html,scss,cucumber,coffee set tabstop=2 shiftwidth=2
+autocmd FileType vimfiler nmap <buffer> <2-LeftMouse> <Plug>(vimfiler_edit_file)
 
 
 "
@@ -117,9 +117,9 @@ let g:gist_show_privates = 1
 " Unite.vim
 let g:unite_source_history_yank_enable = 1
 nnoremap <C-y> :Unite history/yank<CR>
-nnoremap <C-h> :Unite -quick-match -silent -auto-resize buffer<CR>
-nnoremap <C-k> :Unite -silent -auto-resize file_rec/async<CR>
-nnoremap <C-l> :Unite -silent -auto-resize grep:.<CR>
+nnoremap <C-k> :Unite -quick-match -start-insert -silent -auto-resize buffer<CR>
+nnoremap <C-l> :Unite -start-insert -silent -auto-resize file_rec/async<CR>
+nnoremap <C-h> :Unite -start-insert -silent -auto-resize grep:.<CR>
 
 " VimFiler
 let g:vimfiler_as_default_explorer = 1
