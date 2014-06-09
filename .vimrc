@@ -12,10 +12,10 @@ if has('win32')
     call neobundle#begin(expand('C:\Users\Michael\Dev\dotfiles\.vim\bundle\'))
 else
     if has('vim_starting')
-        set runtimepath+=.vim/bundle/neobundle.vim/
+        set runtimepath+=~/.vim/bundle/neobundle.vim/
     endif
 
-    call neobundle#begin(expand('.vim/bundle/'))
+    call neobundle#begin(expand('~/.vim/bundle/'))
 endif
 
 " let NeoBundle manage itself - required
