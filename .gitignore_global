@@ -109,4 +109,12 @@ node_modules
 #
 # Vagrant
 #
+
 .vagrant/
+
+
+#
+# Ag
+#
+
+.agignore

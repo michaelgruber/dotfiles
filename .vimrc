@@ -116,10 +116,18 @@ let g:gist_show_privates = 1
 
 " Unite.vim
 let g:unite_source_history_yank_enable = 1
+
+" use ag as grep replacement
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column --hidden'
+  let g:unite_source_grep_recursive_opt = ''
+endif
+
 nnoremap <C-y> :Unite history/yank<CR>
-nnoremap <C-k> :Unite -quick-match -start-insert -silent -auto-resize buffer<CR>
-nnoremap <C-l> :Unite -start-insert -silent -auto-resize file_rec/async<CR>
-nnoremap <C-h> :Unite -start-insert -silent -auto-resize grep:.<CR>
+nnoremap <C-k> :Unite -start-insert -auto-resize -auto-preview -silent -quick-match buffer<CR>
+nnoremap <C-l> :Unite -start-insert -auto-resize -auto-preview -silent file_rec/async<CR>
+nnoremap <C-h> :Unite -start-insert -auto-resize -auto-preview -silent grep:.<CR>
 
 " VimFiler
 let g:vimfiler_as_default_explorer = 1
