@@ -146,9 +146,11 @@ map <Leader>a :call RunAllSpecs()<CR>
 " Windows
 if has('win32')
     set guifont=Consolas:h11
-    set undodir=C:\Users\Michael\Dev\dotfiles\.vim\vimundo
-    set directory=C:\Users\Michael\Dev\dotfiles\.vim\swap,.
-    set backupdir=C:\Users\Michael\Dev\dotfiles\.vim\swap,.
+    set undodir=C:\Dev\dotfiles\.vim\vimundo
+    set directory=C:\Dev\dotfiles\.vim\swap,.
+    set backupdir=C:\Dev\dotfiles\.vim\swap,.
+
+    source $VIMRUNTIME\mswin.vim " for windows copy and pasting
 elseif has('unix')
     let s:uname = system("echo -n \"$(uname)\"") " get OS type
 
