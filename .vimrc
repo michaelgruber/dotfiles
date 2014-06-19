@@ -63,7 +63,7 @@ set t_Co=256     " 256 colors if terminal supports it
 " Color Scheme
 set background=light
 colorscheme solarized
-set colorcolumn=80
+set colorcolumn=81
 
 " Indentation
 set tabstop=4
