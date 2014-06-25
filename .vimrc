@@ -42,6 +42,7 @@ NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'wting/rust.vim'
 
 call neobundle#end()
 
