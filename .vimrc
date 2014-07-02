@@ -24,6 +24,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Bundles
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'AndrewRadev/vim-eco'
+NeoBundle 'justinmk/vim-sneak'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mattn/gist-vim'
