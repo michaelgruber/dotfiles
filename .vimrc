@@ -82,6 +82,7 @@ set linebreak
 set nolist
 set textwidth=0
 set wrapmargin=0
+set anti enc=utf-8
 
 " Recovery & Backup
 set directory=~/.vim/swap,.
@@ -150,7 +151,7 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 " Windows
 if has('win32')
-    set guifont=Consolas:h11
+    set guifont=Source\ Code\ Pro:h11,Consolas:h11
     set undodir=C:\Dev\dotfiles\.vim\vimundo
     set directory=C:\Dev\dotfiles\.vim\swap,.
     set backupdir=C:\Dev\dotfiles\.vim\swap,.
@@ -162,7 +163,7 @@ elseif has('unix')
     " OS X
     if !v:shell_error && s:uname == "Darwin"
         set undodir=/Users/michael/.vimundo/
-        set guifont=Menlo:h13
+        set guifont=Source\ Code\ Pro:h12,\ Menlo:h13
 
         " Vim-Rspec
         let g:rspec_runner = "os_x_iterm"
