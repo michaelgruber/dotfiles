@@ -69,8 +69,8 @@ PROMPT_COMMAND='echo -ne "\033]0; ${PWD##*/}\007"; __git_ps1 "\[\033[1m\]\w\[\03
 # Hook direnv into shell
 eval "$(direnv hook bash)" # must be after extensions (rvm, git-prompt, etc.)
 
-# Source all scripts
-for FILE in ~/.bin/* ; do source $FILE ; done
+# Source scripts
+source ~/.bin/grep_kill.sh
 
 # Aliases
 source ~/.aliases
