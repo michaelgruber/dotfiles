@@ -13,6 +13,9 @@ export SQLPATH="/opt/oracle/instantclient_11_2"
 export TNS_ADMIN="/opt/oracle/network/admin"
 export NLS_LANG="AMERICAN_AMERICA.UTF8"
 
+# Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
 
 #
 # MAC ONLY
