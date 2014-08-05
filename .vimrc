@@ -24,6 +24,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Bundles
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'AndrewRadev/vim-eco'
+NeoBundle 'jtratner/vim-flavored-markdown'
 NeoBundle 'justinmk/vim-sneak'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mattn/emmet-vim'
@@ -78,7 +79,6 @@ set smartindent
 
 " Text
 set wrap
-set linebreak
 set nolist
 set textwidth=0
 set wrapmargin=0
@@ -96,7 +96,7 @@ let mapleader = ","
 " Aliases
 command Un Unite
 
-"Syntax
+" Syntax
 au BufRead,BufNewFile *.rabl setf ruby " Rabl
 au BufRead,BufNewFile *.txt setf markdown " Markdown
 
@@ -106,7 +106,7 @@ au BufRead,BufNewFile *.txt setf markdown " Markdown
 "
 
 " sets tab width to two for specific filetypes
-autocmd FileType ruby,haml,eruby,yaml,html,scss,cucumber,coffee set tabstop=2 shiftwidth=2
+autocmd FileType ruby,haml,eruby,yaml,html,scss,cucumber,coffee,markdown set tabstop=2 shiftwidth=2
 autocmd FileType vimfiler nmap <buffer> <2-LeftMouse> <Plug>(vimfiler_edit_file)
 
 
