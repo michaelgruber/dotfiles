@@ -100,6 +100,9 @@ command Un Unite
 au BufRead,BufNewFile *.rabl setf ruby " Rabl
 au BufRead,BufNewFile *.txt setf markdown " Markdown
 
+" Mappings
+nnoremap <leader>o :<C-u>on<CR>
+
 
 "
 " AUTOCMDS
