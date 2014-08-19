@@ -34,7 +34,7 @@ if [[ $OSTYPE == darwin* ]]; then
     export PATH="$PATH:/Applications/git-annex.app/Contents/MacOS"
 
     # Boot2docker
-    export DOCKER_HOST=tcp://localhost:4243
+    export DOCKER_HOST=tcp://192.168.59.103:2375
 
     # Oracle
     export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:/opt/oracle/instantclient_11_2"
