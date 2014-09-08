@@ -145,7 +145,7 @@ nnoremap <C-y> :Unite history/yank<CR>
 nnoremap <C-k> :Unite -start-insert -auto-resize -auto-preview -silent -quick-match buffer<CR>
 nnoremap <C-l> :Unite -start-insert -auto-resize -auto-preview -silent file_rec/async<CR>
 nnoremap <C-h> :Unite -start-insert -auto-resize -auto-preview -silent grep:.<CR>
-nnoremap <silent> <leader>b :<C-u>Unite buffer bookmark<CR>
+nnoremap <silent> <leader>b :<C-u>Unite bookmark<CR>
 nnoremap <silent> <leader>ab :<C-u>UniteBookmarkAdd<CR><CR><CR>
 
 " VimFiler
