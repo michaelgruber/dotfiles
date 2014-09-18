@@ -50,6 +50,7 @@
 .sbt/
 .st3
 .subversion/
+.sqldeveloper/
 .Trash/
 .tnsnames.ora
 .vagrant.d/

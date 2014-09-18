@@ -5,8 +5,8 @@
 # Add bins to to the `$PATH`
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# Enable rvm completion
+[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 
 # Oracle environment variables
 export SQLPATH="/opt/oracle/instantclient_11_2"
@@ -15,7 +15,6 @@ export NLS_LANG="AMERICAN_AMERICA.UTF8"
 
 # Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
 
 #
 # MAC ONLY
@@ -47,7 +46,6 @@ if [[ $OSTYPE == darwin* ]]; then
     export MONO_GAC_PREFIX="/usr/local"
 fi
 
-
 #
 # LINUX ONLY
 #
@@ -55,7 +53,6 @@ fi
 if [[ $OSTYPE == linux-gnu ]]; then
     alias vim='gvim'
 fi
-
 
 #
 # SETUP
@@ -77,3 +74,5 @@ source ~/.bin/grep_kill.sh
 
 # Aliases
 source ~/.aliases
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
