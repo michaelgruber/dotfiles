@@ -115,6 +115,9 @@ au BufRead,BufNewFile *.txt setf markdown " Markdown
 " General
 autocmd FileType ruby,haml,eruby,yaml,html,scss,cucumber,coffee,markdown set tabstop=2 shiftwidth=2
 
+" Unite.vim
+autocmd FileType unite nmap <silent><buffer><expr> v unite#do_action('vsplit')
+
 " Vim-fugitive
 autocmd FileType fugitiveblame nmap e o
 autocmd FileType git nmap q :q<CR>
@@ -173,7 +176,7 @@ nnoremap <leader>wk <C-w>k
 nnoremap <leader>wl <C-w>l
 nnoremap <leader>ww <C-w>w
 
-" Unite
+" Unite.vim
 nnoremap <leader>b :<C-u>Unite bookmark<CR>
 nnoremap <leader>ba :<C-u>UniteBookmarkAdd<CR><CR><CR>
 nnoremap <leader>h :Unite -start-insert -auto-resize -auto-preview -silent grep:.<CR>
