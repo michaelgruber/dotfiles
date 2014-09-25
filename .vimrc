@@ -190,6 +190,7 @@ nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gco :Gread<CR>
 nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gdc :Git! diff --cached<CR>
 nnoremap <leader>gl :Git! log<CR>
 nnoremap <leader>gs :Gstatus<CR>
 
