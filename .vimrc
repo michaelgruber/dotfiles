@@ -157,8 +157,8 @@ let g:sneak#s_next = 1
 
 " VimFiler
 let g:vimfiler_as_default_explorer = 1
-let g:vimfiler_execute_file_list = {}
-let g:vimfiler_execute_file_list['_'] = 'vim'
+let g:vimfiler_ignore_pattern='\%(.ini\|.sys\|.bat\|.BAK\|.DAT\|.pyc\|.egg-info\)$\|'.
+  \ '^\%(.git\|.vagrant\|__pycache__\|.DS_Store\|.o\|.ropeproject\)$'
 
 
 "
