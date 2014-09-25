@@ -15,10 +15,11 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # Chruby
 source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh # auto switching
+chruby ruby-2.1 # Set default ruby
 
-# Set default ruby
-chruby ruby-2.1
+# enable auto switching. set after default ruby
+source /usr/local/share/chruby/auto.sh
+
 
 #
 # MAC ONLY
