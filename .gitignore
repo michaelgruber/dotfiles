@@ -1,6 +1,11 @@
 #
 # Dotfiles
 #
+!.local/bin/*.sh
+!.ssh/config
+.CFUserTextEncoding
+.NERDTreeBookmarks
+.Trash/
 .atom/packages
 .atom/storage
 .atom/themes
@@ -8,14 +13,13 @@
 .boot2docker/
 .bundler/
 .cache/
-.CFUserTextEncoding
 .coffee_history
 .config/
 .conscript/
 .cups
 .dbshell
-.dropbox/
 .dropbox-master/
+.dropbox/
 .filezilla/
 .fontconfig/
 .forever/
@@ -29,11 +33,9 @@
 .ivy2
 .lein/
 .local/bin/*
-!.local/bin/*.sh
 .local/share/
 .m2/
 .mongorc.js
-.NERDTreeBookmarks
 .netrc
 .node-gyp/
 .npm/
@@ -44,20 +46,18 @@
 .profile
 .pry_history
 .rnd
-.rvm/
-.ssh/*
-!.ssh/config
+.rubies/
 .sbt/
+.sqldeveloper/
+.ssh/*
 .st3
 .subversion/
-.sqldeveloper/
-.Trash/
 .tnsnames.ora
 .vagrant.d/
 .vim/swap
+.vim/vimundo/
 .viminfo
 .vimundo/
-.vim/vimundo/
 .yeoman/
 .zlogin
 .zshrc
@@ -66,8 +66,8 @@
 #
 # OS X Folders
 #
-Applications/
 Applications (Parallels)/
+Applications/
 Desktop/
 Documents/
 Downloads/
@@ -94,11 +94,11 @@ Writing/
 #
 # github/gitignore vim.gitignore
 #
-.*.s[a-w][a-z]
 *.un~
-Session.vim
-.netrwhist
 *~
+.*.s[a-w][a-z]
+.netrwhist
+Session.vim
 
 
 #

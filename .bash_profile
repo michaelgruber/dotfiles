@@ -5,9 +5,6 @@
 # Add bins to to the `$PATH`
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
-# Enable rvm completion
-[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
-
 # Oracle environment variables
 export SQLPATH="/opt/oracle/instantclient_11_2"
 export TNS_ADMIN="/opt/oracle/network/admin"
@@ -15,6 +12,13 @@ export NLS_LANG="AMERICAN_AMERICA.UTF8"
 
 # Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Chruby
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh # auto switching
+
+# Set default ruby
+chruby ruby-2.1
 
 #
 # MAC ONLY
@@ -74,5 +78,3 @@ source ~/.bin/grep_kill.sh
 
 # Aliases
 source ~/.aliases
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
