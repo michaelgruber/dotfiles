@@ -45,6 +45,7 @@ NeoBundle 'parkr/vim-jekyll'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-liquid'
 NeoBundle 'tpope/vim-markdown'
@@ -114,6 +115,10 @@ au BufRead,BufNewFile *.txt setf markdown " Markdown
 " General
 autocmd FileType ruby,haml,eruby,yaml,html,scss,cucumber,coffee,markdown set tabstop=2 shiftwidth=2
 
+" Dispatch.vim
+autocmd BufEnter *_spec.js.coffee let b:dispatch = 'teaspoon % --no-color'
+autocmd BufEnter *_spec.rb let b:dispatch = 'rspec %'
+
 " Unite.vim
 autocmd FileType unite nmap <silent><buffer><expr> v unite#do_action('vsplit')
 
@@ -175,6 +180,9 @@ nnoremap <leader>wk <C-w>k
 nnoremap <leader>wl <C-w>l
 nnoremap <leader>ww <C-w>w
 
+" Dispatch.vim
+nnoremap <leader>t :Dispatch<CR><CR>
+
 " Unite.vim
 nnoremap <leader>b :<C-u>Unite bookmark<CR>
 nnoremap <leader>ba :<C-u>UniteBookmarkAdd<CR><CR><CR>
@@ -192,13 +200,6 @@ nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gdc :Git! diff --cached<CR>
 nnoremap <leader>gl :Git! log<CR>
 nnoremap <leader>gs :Gstatus<CR>
-
-" Vim-rspec
-nnoremap <leader>t :call RunCurrentSpecFile()<CR>
-nnoremap <leader>ta :call RunAllSpecs()<CR>
-nnoremap <leader>tf :call RunCurrentSpecFile()<CR>
-nnoremap <leader>tl :call RunLastSpec()<CR>
-nnoremap <leader>tt :call RunNearestSpec()<CR>
 
 " VimFiler
 nnoremap <leader>j :VimFilerExplorer<CR>
