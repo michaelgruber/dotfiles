@@ -51,13 +51,15 @@ if [[ $OSTYPE == darwin* ]]; then
     export MONO_GAC_PREFIX="/usr/local"
 fi
 
+
 #
 # LINUX ONLY
 #
 
-if [[ $OSTYPE == linux-gnu ]]; then
+if [ $OSTYPE == linux-gnu ] && [ ! -n "$SSH_CLIENT" ] && [ ! -n "$SSH_TTY" ]; then
     alias vim='gvim'
 fi
+
 
 #
 # SETUP
