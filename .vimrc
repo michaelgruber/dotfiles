@@ -34,6 +34,9 @@ NeoBundle 'Shougo/vimproc.vim', {
 
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'AndrewRadev/vim-eco'
+NeoBundle 'Shougo/neocomplcache.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'jtratner/vim-flavored-markdown'
 NeoBundle 'justinmk/vim-sneak'
 NeoBundle 'kchmck/vim-coffee-script'
@@ -42,8 +45,6 @@ NeoBundle 'mattn/gist-vim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'parkr/vim-jekyll'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tpope/vim-fugitive'
@@ -119,6 +120,14 @@ autocmd FileType ruby,haml,eruby,yaml,html,scss,cucumber,coffee,markdown set tab
 autocmd BufEnter *_spec.js.coffee let b:dispatch = 'teaspoon % --no-color'
 autocmd BufEnter *_spec.rb let b:dispatch = 'rspec %'
 
+" Neocomplcache.vim
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+
 " Unite.vim
 autocmd FileType unite nmap <silent><buffer><expr> v unite#do_action('vsplit')
 
@@ -144,6 +153,19 @@ autocmd FileType vimfiler nmap <silent><buffer><expr><CR> vimfiler#smart_cursor_
 let g:gist_detect_filetype = 1
 let g:gist_post_private = 1
 let g:gist_show_privates = 1
+
+" Neocomplcache.vim
+let g:acp_enableAtStartup = 0
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+
+if !exists('g:neocomplcache_force_omni_patterns')
+  let g:neocomplcache_force_omni_patterns = {}
+endif
+
+let g:neocomplcache_force_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 
 " Unite.vim
 let g:unite_source_history_yank_enable = 1
@@ -182,6 +204,20 @@ nnoremap <leader>ww <C-w>w
 
 " Dispatch.vim
 nnoremap <leader>t :Dispatch<CR><CR>
+
+" Neocomplcache.vim
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+
+function! s:my_cr_function()
+  return neocomplcache#smart_close_popup() . "\<CR>"
+endfunction
+
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplcache#close_popup()
+inoremap <expr><C-e>  neocomplcache#cancel_popup()
+
 
 " Unite.vim
 nnoremap <leader>b :<C-u>Unite bookmark<CR>
