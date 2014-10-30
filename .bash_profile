@@ -13,6 +13,14 @@ export NLS_LANG="AMERICAN_AMERICA.UTF8"
 # Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# Setup default Go environment
+if hash go 2>/dev/null; then
+    export GOROOT=`go env GOROOT`
+    mkdir -p $HOME/go
+    export GOPATH=$HOME/go
+    export PATH=$PATH:$GOPATH/bin
+fi
+
 # Chruby
 source /usr/local/share/chruby/chruby.sh
 chruby ruby-2.1 # Set default ruby
