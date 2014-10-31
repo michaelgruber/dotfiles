@@ -57,6 +57,7 @@
 .vagrant.d/
 .vim/
 .viminfo
+.vimundo/
 .yeoman/
 .zlogin
 .zshrc
