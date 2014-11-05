@@ -4,8 +4,11 @@ set path=$PWD/** " add subdirectories to path for searching
 " Go
 set runtimepath+=$GOROOT/misc/vim
 
-filetype indent on
-syntax enable
+" Start Pathogen (quietly in case there's no .vim/autoload/pathogen.vim)
+silent! execute pathogen#infect()
+
+syntax on
+filetype plugin indent on
 
 set hidden       " hide buffer instead of closing
 set number       " line numbers
