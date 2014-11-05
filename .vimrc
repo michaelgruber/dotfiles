@@ -33,8 +33,8 @@ set directory=~/.vim/swap,.
 set undodir=~/.vimundo/
 
 " Syntax
-autocmd BufRead,BufNewFile *.rabl setf ruby " Rabl
-autocmd BufRead,BufNewFile *.txt setf markdown " Markdown
+autocmd BufRead,BufNewFile *.rabl set filetype=ruby " Rabl
+autocmd BufRead,BufNewFile *.md set filetype=text
 
 " Windows
 if has('win32')
