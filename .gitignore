@@ -1,6 +1,7 @@
 #
 # Dotfiles
 #
+
 !.local/bin/*.sh
 !.ssh/config
 .atom/packages
@@ -66,6 +67,7 @@
 #
 # OS X Folders
 #
+
 Applications (Parallels)/
 Applications/
 Desktop/
@@ -84,6 +86,7 @@ VirtualBox VMs/
 #
 # My Folders
 #
+
 Dev/
 Notes
 Sbx/
@@ -95,6 +98,7 @@ go/
 #
 # github/gitignore vim.gitignore
 #
+
 *.un~
 *~
 .*.s[a-w][a-z]
@@ -105,9 +109,12 @@ Session.vim
 #
 # Misc.
 #
+
 oradiag_*/
+
 
 #
 # Vim - NeoBundle
 #
+
 .vim/bundle/*
