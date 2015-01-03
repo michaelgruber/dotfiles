@@ -52,9 +52,6 @@ if [[ $OSTYPE == darwin* ]]; then
     export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:/opt/oracle/instantclient_11_2"
     export PATH=$PATH:$DYLD_LIBRARY_PATH
 
-    # Mac Aliases
-    alias vim='mvim' # use 'vi' to use vim in terminal
-
     # Mono
     export MONO_GAC_PREFIX="/usr/local"
 fi
@@ -64,9 +61,8 @@ fi
 # LINUX ONLY
 #
 
-if [ $OSTYPE == linux-gnu ] && [ ! -n "$SSH_CLIENT" ] && [ ! -n "$SSH_TTY" ]; then
-    alias vim='gvim'
-fi
+#if [ $OSTYPE == linux-gnu ] && [ ! -n "$SSH_CLIENT" ] && [ ! -n "$SSH_TTY" ]; then
+#fi
 
 
 #
