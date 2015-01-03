@@ -12,6 +12,7 @@
 .bundler/
 .cache/
 .CFUserTextEncoding
+.clion10/
 .coffee_history
 .config/
 .conscript/
