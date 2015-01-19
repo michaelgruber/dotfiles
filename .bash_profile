@@ -23,7 +23,7 @@ fi
 
 # Chruby
 source /usr/local/share/chruby/chruby.sh
-chruby ruby 2.1.5 # Set default ruby
+chruby ruby 2.2.0 # Set default ruby
 
 # enable auto switching. set after default ruby
 source /usr/local/share/chruby/auto.sh
