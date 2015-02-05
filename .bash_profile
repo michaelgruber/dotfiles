@@ -3,7 +3,7 @@
 #
 
 # Add bins to to the `$PATH`
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.bin/:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.bin:$PATH"
 
 # Oracle environment variables
 export SQLPATH="/opt/oracle/instantclient_11_2"
