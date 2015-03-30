@@ -21,11 +21,6 @@ if hash go 2>/dev/null; then
     export PATH=$PATH:$GOPATH/bin
 fi
 
-# Setup cocos2d-x development
-export COCOS_CONSOLE_ROOT=/Users/michael/Dev/cocos2d-x/tools/cocos2d-console/bin
-export COCOS_TEMPLATES_ROOT=/Users/michael/Dev/cocos2d-x/templates
-export PATH=$COCOS_TEMPLATES_ROOT:$COCOS_CONSOLE_ROOT:$PATH
-
 # Chruby
 source /usr/local/share/chruby/chruby.sh
 chruby ruby 2.2.0 # Set default ruby

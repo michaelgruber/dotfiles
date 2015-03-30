@@ -32,6 +32,7 @@
 .irb-history
 .ivy2
 .lein/
+.lesshst
 .local/bin/*
 .local/share/
 .m2/
@@ -40,12 +41,14 @@
 .netrc
 .node-gyp/
 .npm/
+.pgpass
 .pow
 .powconfig
 .powenv
 .powrc
 .profile
 .pry_history
+.psql_history
 .rnd
 .rubies/
 .ruby_inline/
@@ -115,7 +118,14 @@ oradiag_*/
 
 
 #
-# Vim - NeoBundle
+# Vim - Pathogen
 #
 
 .vim/bundle/*
+
+
+#
+# Scripts
+#
+
+.bin/note
