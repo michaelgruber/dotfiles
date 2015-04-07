@@ -37,6 +37,7 @@
 .local/share/
 .m2/
 .mongorc.js
+.mysql_history
 .NERDTreeBookmarks
 .netrc
 .node-gyp/
