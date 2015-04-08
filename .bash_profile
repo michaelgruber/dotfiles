@@ -48,6 +48,9 @@ if [[ $OSTYPE == darwin* ]]; then
 
     # Mono
     export MONO_GAC_PREFIX="/usr/local"
+
+    # Boot2docker
+    $(boot2docker shellinit 2>/dev/null)
 fi
 
 
