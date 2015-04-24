@@ -7,6 +7,8 @@
 .atom/packages
 .atom/storage
 .atom/themes
+.aws.env
+.aws/credentials
 .bash_history
 .boot2docker/
 .bundler/
