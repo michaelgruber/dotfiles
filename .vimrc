@@ -10,13 +10,14 @@ silent! execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+set backspace=2  " enable backspace
 set hidden       " hide buffer instead of closing
 set number       " line numbers
 set ruler        " cursor location
+set shortmess+=A " no swap exists messages
 set spell        " spell checker
 set t_Co=256     " 256 colors if terminal supports it
 set undofile     " use undo file (>=7.3)
-set shortmess+=A " no swap exists messages
 
 " Color Scheme
 silent! colorscheme solarized
