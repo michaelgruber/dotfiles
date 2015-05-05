@@ -4,6 +4,7 @@
 
 !.local/bin/*.sh
 !.ssh/config
+.CFUserTextEncoding
 .atom/packages
 .atom/storage
 .atom/themes
@@ -13,13 +14,13 @@
 .boot2docker/
 .bundler/
 .cache/
-.CFUserTextEncoding
 .clion10/
 .coffee_history
 .config/
 .conscript/
 .cups
 .dbshell
+.dockercfg
 .dropbox-master/
 .dropbox/
 .filezilla/
@@ -118,6 +119,7 @@ Session.vim
 #
 
 oradiag_*/
+docker-deploy.retry
 
 
 #
