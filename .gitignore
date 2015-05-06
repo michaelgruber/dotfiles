@@ -118,8 +118,8 @@ Session.vim
 # Misc.
 #
 
+*.retry
 oradiag_*/
-docker-deploy.retry
 
 
 #
