@@ -31,6 +31,9 @@ chruby ruby 2.2.0 # Set default ruby
 # enable auto switching. set after default ruby
 source /usr/local/share/chruby/auto.sh
 
+# Add Tmux scripts to `$PATH`
+export PATH="$PATH:$HOME/.tmux"
+
 
 #
 # MAC ONLY

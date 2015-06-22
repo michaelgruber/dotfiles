@@ -1,0 +1,47 @@
+#!/bin/bash
+
+MMI_DIR="$HOME/Dev/market-maker-inbox"
+CM_DIR="$HOME/Dev/commitmentmanager"
+NOTES_DIR="$HOME/Dropbox/Notes"
+
+cd $MMI_BASE
+
+tmux start-server
+tmux new-session -d -s work
+tmux new-window -t work:1 -n mmi-edit
+tmux new-window -t work:2 -n cm-edit
+tmux new-window -t work:3 -n notes
+tmux new-window -t work:4 -n mmi-serve
+tmux new-window -t work:5 -n cm-serve
+
+# Market Maker Inbox
+
+tmux split-window -t work:1 -p 25
+tmux split-window -h -t work:1.1
+
+tmux send-keys -t work:1.0 "cd $MMI_DIR ; vim ." C-m
+tmux send-keys -t work:1.1 "cd $MMI_DIR ; git status" C-m
+tmux send-keys -t work:1.2 "cd $MMI_DIR && direnv reload" C-m
+tmux send-keys -t work:1.2 "bundle exec rails c" C-m
+
+tmux send-keys -t work:4 "cd $MMI_DIR && direnv reload" C-m
+tmux send-keys -t work:4 "bundle exec rails s" C-m
+
+# Commitment Manager
+
+tmux split-window -t work:2 -p 25
+tmux split-window -h -t work:2.1
+
+tmux send-keys -t work:2.0 "cd $CM_DIR ; vim ." C-m
+tmux send-keys -t work:2.1 "cd $CM_DIR ; git status" C-m
+tmux send-keys -t work:2.2 "cd $CM_DIR ; vagrant up ; bundle exec rails c" C-m
+
+tmux send-keys -t work:5 "cd $CM_DIR ; vagrant up ; bundle exec rails s -p 3001" C-m
+
+# Notes
+
+tmux send-keys -t work:3 "cd $NOTES_DIR ; vim ." C-m
+
+# Start
+
+tmux -2 attach-session -t work:0.0
