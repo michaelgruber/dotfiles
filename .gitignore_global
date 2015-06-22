@@ -80,7 +80,6 @@ capybara-*.html
 /tmp/*
 /db/*.sqlite3
 /public/system/*
-/coverage/
 /spec/tmp/*
 **.orig
 rerun.txt
