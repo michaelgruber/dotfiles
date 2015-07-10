@@ -39,6 +39,8 @@
 .local/bin/*
 .local/share/
 .m2/
+.meteor/
+.meteorsession
 .mongorc.js
 .mysql_history
 .NERDTreeBookmarks
