@@ -5,6 +5,9 @@
 !.local/bin/*.sh
 !.ssh/config
 .CFUserTextEncoding
+.NERDTreeBookmarks
+.Trash/
+.android/
 .atom/packages
 .atom/storage
 .atom/themes
@@ -44,8 +47,8 @@
 .meteor/
 .meteorsession
 .mongorc.js
+.mono/
 .mysql_history
-.NERDTreeBookmarks
 .netrc
 .node-gyp/
 .npm/
@@ -66,8 +69,8 @@
 .ssh/*
 .st3
 .subversion/
+.thumbnails/
 .tnsnames.ora
-.Trash/
 .vagrant.d/
 .vim/
 .viminfo
