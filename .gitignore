@@ -7,6 +7,7 @@
 .CFUserTextEncoding
 .NERDTreeBookmarks
 .Trash/
+.Xauthority
 .android/
 .atom/packages
 .atom/storage
@@ -15,8 +16,11 @@
 .aws/credentials
 .babel.json
 .bash_history
+.bin/jfmt
+.bin/note
 .boot2docker/
 .bundler/
+.byebug_hist
 .cache/
 .clion10/
 .coffee_history
@@ -24,7 +28,8 @@
 .conscript/
 .cups
 .dbshell
-.dockercfg
+.docker/
+.docker_env
 .dropbox-master/
 .dropbox/
 .filezilla/
@@ -51,6 +56,7 @@
 .mysql_history
 .netrc
 .node-gyp/
+.node_repl_history
 .npm/
 .pgpass
 .pow
@@ -71,6 +77,7 @@
 .subversion/
 .thumbnails/
 .tnsnames.ora
+.v8flags.*
 .vagrant.d/
 .vim/
 .viminfo
@@ -119,7 +126,6 @@ go/
 *~
 .*.s[a-w][a-z]
 .netrwhist
-Session.vim
 
 
 #
@@ -131,14 +137,8 @@ oradiag_*/
 
 
 #
-# Vim - Pathogen
+# Vim
 #
 
 .vim/bundle/*
-
-
-#
-# Scripts
-#
-
-.bin/note
+Session.vim
