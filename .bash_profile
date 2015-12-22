@@ -6,7 +6,11 @@
 export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.bin:$PATH"
 
 # Oracle environment variables
-export SQLPATH="/opt/oracle/instantclient_11_2"
+export SQLPATH='/opt/oracle/instantclient'
+export OCI_DIR=$SQLPATH
+export OCI_HOME=$SQLPATH
+export OCI_LIB_DIR=$OCI_HOME
+export OCI_INCLUDE_DIR=$OCI_HOME/sdk/include
 export TNS_ADMIN="/opt/oracle/network/admin"
 export NLS_LANG="AMERICAN_AMERICA.UTF8"
 
@@ -45,11 +49,8 @@ if [[ $OSTYPE == darwin* ]]; then
         . `brew --prefix`/etc/bash_completion
     fi
 
-    # Git Annex
-    export PATH="$PATH:/Applications/git-annex.app/Contents/MacOS"
-
     # Oracle
-    export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:/opt/oracle/instantclient_11_2"
+    export DYLD_LIBRARY_PATH=$OCI_LIB_DIR
     export PATH=$PATH:$DYLD_LIBRARY_PATH
 
     # Mono
