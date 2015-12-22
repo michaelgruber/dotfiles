@@ -1,47 +1,36 @@
 #!/bin/bash
 
-MMI_DIR="$HOME/Dev/market-maker-inbox"
-CM_DIR="$HOME/Dev/commitmentmanager"
-NOTES_DIR="$HOME/Dropbox/Notes"
-
-cd $MMI_BASE
+DEVD="$HOME/Dev"
+AGGD="$DEVD/agg3/agg3.0"
+CMGD="$DEVD/commitmentmanager"
+MMID="$DEVD/market-maker-inbox"
+NTSD="$HOME/Dropbox/Notes"
 
 tmux start-server
 tmux new-session -d -s work
-tmux new-window -t work:1 -n mmi-edit
-tmux new-window -t work:2 -n cm-edit
-tmux new-window -t work:3 -n notes
-tmux new-window -t work:4 -n mmi-serve
-tmux new-window -t work:5 -n cm-serve
 
-# Market Maker Inbox
+tmux new-window   -c $AGGD -n agg  -t work:1
+tmux split-window -c $AGGD -p 25   -t work:1
+tmux split-window -c $AGGD -h      -t work:1.1
+tmux send-keys -t work:1.0 Enter "vim ." Enter
+tmux send-keys -t work:1.2 "node" Enter
 
-tmux split-window -t work:1 -p 25
-tmux split-window -h -t work:1.1
+tmux new-window   -c $CMGD -n cmgr -t work:2
+tmux split-window -c $CMGD -p 25   -t work:2
+tmux split-window -c $CMGD -h      -t work:2.1
+tmux send-keys -t work:2.0 "vim ." Enter
+tmux send-keys -t work:2.1 "git status" Enter
+tmux send-keys -t work:2.2 "direnv reload ; bundle exec rails c" Enter
 
-tmux send-keys -t work:1.0 "cd $MMI_DIR ; vim ." C-m
-tmux send-keys -t work:1.1 "cd $MMI_DIR ; git status" C-m
-tmux send-keys -t work:1.2 "cd $MMI_DIR && direnv reload" C-m
-tmux send-keys -t work:1.2 "bundle exec rails c" C-m
+tmux new-window   -c $MMID -n mmi  -t work:3
+tmux split-window -c $MMID -p 25   -t work:3
+tmux split-window -c $MMID -h      -t work:3.1
+tmux send-keys -t work:3.0 "vim ." Enter
+tmux send-keys -t work:3.1 "git status" Enter
+tmux send-keys -t work:3.2 "direnv reload ; bundle exec rails c" Enter
 
-tmux send-keys -t work:4 "cd $MMI_DIR && direnv reload" C-m
-tmux send-keys -t work:4 "bundle exec rails s" C-m
+tmux new-window   -c $NTSD -n note -t work:4
+tmux split-window -c $NTSD -p 25   -t work:4
+tmux send-keys -t work:4.0 "vim ." Enter
 
-# Commitment Manager
-
-tmux split-window -t work:2 -p 25
-tmux split-window -h -t work:2.1
-
-tmux send-keys -t work:2.0 "cd $CM_DIR ; vim ." C-m
-tmux send-keys -t work:2.1 "cd $CM_DIR ; git status" C-m
-tmux send-keys -t work:2.2 "cd $CM_DIR ; vagrant up ; bundle exec rails c" C-m
-
-tmux send-keys -t work:5 "cd $CM_DIR ; vagrant up ; bundle exec rails s -p 3001" C-m
-
-# Notes
-
-tmux send-keys -t work:3 "cd $NOTES_DIR ; vim ." C-m
-
-# Start
-
-tmux -2 attach-session -t work:0.0
+tmux -2 attach-session -t work:0
