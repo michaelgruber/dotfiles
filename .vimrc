@@ -1,21 +1,40 @@
-set nocompatible
+" NeoBundle
+if has('vim_starting')
+  if &compatible
+    set nocompatible
+  endif
 
-cd %:p:h         " set working dir to current file/dir when vim opens
-set path=$PWD/** " add subdirectories to path for searching
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+end
 
-" Start Pathogen (quietly in case there's no .vim/autoload/pathogen.vim)
-silent! execute pathogen#infect()
+call neobundle#begin(expand('~/.vim/bundle/'))
 
-syntax on
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'AndrewRadev/vim-eco'
+NeoBundle 'ekalinin/Dockerfile.vim'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimproc.vim', { 'build' : { 'mac' : 'make' } }
+
+call neobundle#end()
+
 filetype plugin indent on
 
-set backspace=2 " enable backspace
-set hidden      " hide buffer instead of closing
-set nowrap      " don't wrap lines
-set number      " line numbers
-set ruler       " cursor location
-set spell       " spell checker
-set t_Co=256    " 256 colors if terminal supports it
+NeoBundleCheck
+
+" General
+syntax on
+cd %:p:h         " set working dir to current file/dir when vim opens
+set path=$PWD/** " add subdirectories to path for searching
+set backspace=2  " enable backspace
+set hidden       " hide buffer instead of closing
+set nowrap       " don't wrap lines
+set number       " line numbers
+set ruler        " cursor location
+set spell        " spell checker
+set t_Co=256     " 256 colors if terminal supports it
 
 " Persist undo
 if has('persistent_undo')
@@ -46,6 +65,13 @@ autocmd BufRead,BufNewFile *.md set filetype=text
 
 " Go
 set runtimepath+=$GOROOT/misc/vim
+
+" Unite
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+
+let g:unite_source_rec_async_command = ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
+
+nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
 
 " Windows
 if has('win32')
