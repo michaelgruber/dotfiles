@@ -23,7 +23,7 @@ if has('persistent_undo')
   set undodir=~/.vim/backups
   set undofile
 endif
-"
+
 " Recovery & Backup Off
 set nobackup
 set noswapfile
@@ -35,10 +35,9 @@ set background=light
 
 " Indentation
 set expandtab " soft tabs
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 
-autocmd FileType javascript,coffee,cucumber,eruby,go,haml,html,markdown,ruby,scss,yaml setlocal tabstop=2 shiftwidth=2
 autocmd FileType go set noexpandtab tabstop=8 shiftwidth=8
 
 " Syntax
