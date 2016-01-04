@@ -17,6 +17,8 @@ NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc.vim', { 'build' : { 'mac' : 'make' } }
+NeoBundle 'Shougo/vimshell.vim'
+NeoBundle 'tpope/vim-surround'
 
 call neobundle#end()
 
