@@ -69,9 +69,13 @@ set runtimepath+=$GOROOT/misc/vim
 " Unite
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
-let g:unite_source_rec_async_command = ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
+let g:unite_source_rec_async_command = ['pt', '--follow', '--nocolor', '--nogroup', '--hidden', '-l', '']
+let g:unite_source_grep_command = 'pt'
+let g:unite_source_grep_default_opts = '--nogroup --nocolor'
+let g:unite_source_grep_recursive_opt = ''
 
-nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
+nnoremap <leader>f :<C-u>Unite -start-insert file_rec/async:!<CR>
+nnoremap <leader>s :<C-u>Unite -start-insert -buffer-name=search grep:.<CR>
 
 " Windows
 if has('win32')
