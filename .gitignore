@@ -4,11 +4,8 @@
 
 !.local/bin/*.sh
 !.ssh/config
-.CFUserTextEncoding
-.NERDTreeBookmarks
-.Trash/
-.Xauthority
 .android/
+.atom/
 .atom/packages
 .atom/storage
 .atom/themes
@@ -16,12 +13,14 @@
 .aws/credentials
 .babel.json
 .bash_history
+.bash_history-
 .bin/jfmt
 .bin/note
 .boot2docker/
 .bundler/
 .byebug_hist
 .cache/
+.CFUserTextEncoding
 .clion10/
 .coffee_history
 .config/
@@ -54,6 +53,7 @@
 .mongorc.js
 .mono/
 .mysql_history
+.NERDTreeBookmarks
 .netrc
 .node-gyp/
 .node_repl_history
@@ -77,12 +77,15 @@
 .subversion/
 .thumbnails/
 .tnsnames.ora
+.Trash/
 .v8flags.*
 .vagrant.d/
 .vim/
 .viminfo
 .vimundo/
+.Xauthority
 .yeoman/
+.yo-rc-global.json
 .zlogin
 .zshrc
 
@@ -142,3 +145,4 @@ oradiag_*/
 
 .vim/bundle/*
 Session.vim
+vimfiles
