@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+grepl() {
+  if [[ "$1" == '-k' ]]; then
+    local killing='true'
+    shift
+  fi
+
+  local processes=$(ps -e | grep "$@" | grep -v grep)
+
+  if [[ -z $processes ]]; then
+    echo "No processes matching $@." >&2
+    return
+  fi
+
+  if [[ "$killing" == 'true' ]]; then
+    hit_list=$(echo "$processes" | awk '{print $1}' )
+    echo "$hit_list" | xargs kill -9
+    echo 'KILLED:'
+  else
+    echo 'PROCESSES:'
+  fi
+
+  echo "$processes" | awk '{ if ($5) { print $1, $5 } else { print $1, $4 } }'
+}
+
+jfmt() {
+  ruby -e "require 'json'" \
+       -e "path = File.expand_path('$1')" \
+       -e "file = File.read(path)" \
+       -e "data = JSON.parse(file)" \
+       -e "json = JSON.pretty_generate(data)" \
+       -e "File.write(path, json)"
+}
+
+dockerclean() {
+  docker rm $(docker ps -a | grep Exited | awk '{print $1}')
+  docker rmi $(docker images -q -f dangling=true)
+  docker volume rm $(docker volume ls -qf dangling=true)
+}

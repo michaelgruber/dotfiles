@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# Go
+export GOROOT="/usr/local/opt/go/libexec"
+export PATH="$PATH:$GOROOT/bin"
+
+# Oracle
+export DYLD_LIBRARY_PATH=$OCI_LIB_DIR
+export PATH=$PATH:$DYLD_LIBRARY_PATH
+
+# Postgres.app
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
+
+# Check for homebrew
+if ! command -v brew >/dev/null; then
+  echo "Install homebrew"
+  return
+fi
+
+# HOMEBREW REQUIRED
+
+# Git autocompletion
+if [[ -f "$(brew --prefix)/etc/bash_completion" ]]; then
+  source "$(brew --prefix)/etc/bash_completion"
+else
+  echo "Install bash-completion"
+fi

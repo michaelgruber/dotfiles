@@ -1,25 +1,54 @@
 [user]
-	name = Michael Gruber
-	email = mail@michaelgruber.me
+  name = Michael Gruber
+  email = mail@michaelgruber.me
+
 [core]
-	editor = "vim -f"
-	excludesfile = ~/.gitignore_global
+  editor = "vim -f"
+  excludesfile = ~/.gitignore_global
+
 [color]
-	ui = true
+  ui = true
+
 [merge]
-	tool = vimdiff
+  tool = vimdiff
+
 [alias]
-	unstage = reset HEAD --
-	last = log -1 HEAD
-	bundled = !sh ~/.bin/git_bundled.sh
-	start = !cd ${GIT_PREFIX} && sh ~/.bin/git_start.sh
+  last = log -1 HEAD
+
+  bundled = "!f() { \
+    local dest=\"$HOME/Dropbox/Git\\ Backups/\"; \
+    local repo=$(basename $(git rev-parse --show-toplevel)); \
+    git bundle create \"${dest}${repo}.bundle\" --all; \
+  }; f"
+
+  unstage = reset HEAD --
+
+  start = "!f() { \
+    git init; \
+    if [ -e .gitignore ]; then \
+      mv .gitignore ._gitignore; \
+      touch .gitignore; \
+      git add .gitignore; \
+      mv ._gitignore .gitignore; \
+    else \
+      touch .gitignore; \
+      git add .gitignore; \
+    fi; \
+    git commit -m 'initial commit'; \
+    git checkout -b develop; \
+  }; f"
+
 [cor]
-	autocrlf = false
+  autocrlf = false
+
 [diff]
-	tool = vimdiff
+  tool = vimdiff
+
 [difftool]
-	prompt = false
+  prompt = false
+
 [push]
-	default = simple
+  default = simple
+
 [github]
-	user = michaelgruber
+  user = michaelgruber

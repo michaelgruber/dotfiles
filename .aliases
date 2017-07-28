@@ -1,4 +1,4 @@
-# General
-alias grepl='grep_process_list'
-alias kgrepl='grep_kill'
-alias kdev='kgrepl dev_staging'
+#!/usr/bin/env bash
+
+alias dcr='docker-compose run --rm'
+alias dcrw='dcr web'
