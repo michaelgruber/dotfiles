@@ -17,6 +17,10 @@ if ! command -v brew >/dev/null; then
   return
 fi
 
+# Python
+alias pip='pip2'
+export PATH="$PATH:$HOME/Library/Python/2.7/bin"
+
 # HOMEBREW REQUIRED
 
 # Git autocompletion
