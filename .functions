@@ -25,12 +25,10 @@ grepl() {
 }
 
 jfmt() {
-  ruby -e "require 'json'" \
-       -e "path = File.expand_path('$1')" \
-       -e "file = File.read(path)" \
-       -e "data = JSON.parse(file)" \
-       -e "json = JSON.pretty_generate(data)" \
-       -e "File.write(path, json)"
+  local tmpfile=$(mktemp)
+  jq . -r -M -S $1 > $tmpfile
+  cat $tmpfile > $1
+  rm $tmpfile
 }
 
 dockerclean() {
