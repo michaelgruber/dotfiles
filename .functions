@@ -36,3 +36,29 @@ dockerclean() {
   docker rmi $(docker images -q -f dangling=true)
   docker volume rm $(docker volume ls -qf dangling=true)
 }
+
+note() {
+  local args="$@"
+  local file_date=$(date "+%Y-%m-%d")
+  local meta_date=$(date "+%Y-%m-%d %T %z")
+  local dir="$HOME/Documents/Notes"
+  local title=$(echo ${args// /-} | tr -cd '[[:alnum:]]-' | tr '[[:upper:]]' '[[:lower:]]')
+  local file="$dir/$file_date-$title.md"
+
+  mkdir -p "$dir"
+
+  if [[ -f "$file" ]]; then
+    echo "File already exists: $file"
+    return 1
+  fi
+
+  cat <<- EOF > $file
+		---
+		date:  $meta_date
+		title: $args
+		---
+		
+	EOF
+
+  vim $file
+}
