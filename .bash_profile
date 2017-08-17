@@ -28,7 +28,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Chruby
 if [[ -d /usr/local/share/chruby ]]; then
   source /usr/local/share/chruby/chruby.sh
-  chruby ruby 2.2.2 # Set default ruby
+  chruby ruby 2.4.1 # Set default ruby
 
   # enable auto switching. set after default ruby
   source /usr/local/share/chruby/auto.sh
