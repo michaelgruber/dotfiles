@@ -11,5 +11,3 @@
 !.gitignore_global
 !.linux
 !.macos
-!.tmux.conf
-!.vimrc

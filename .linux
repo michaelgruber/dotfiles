@@ -1,8 +1,16 @@
 #!/usr/bin/env bash
 
+# Go
+export PATH="$PATH:/usr/local/go/bin"
+
 # Git autocompletion
 if [[ -f "/etc/bash_completion.d/git-prompt" ]]; then
   source "/etc/bash_completion.d/git-prompt"
 else
   echo "Install bash-completion"
 fi
+
+# Texlive
+export PATH=/usr/local/texlive/2017/bin/x86_64-linux:$PATH
+export INFOPATH=$INFOPATH:/usr/local/texlive/2017/texmf-dist/doc/info
+export MANPATH=$MANPATH:/usr/local/texlive/2017/texmf-dist/doc/man
