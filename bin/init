@@ -1,0 +1,12 @@
+#!/bin/bash -ex
+
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+GLOBIGNORE='@(.git)'
+
+shopt -s dotglob
+shopt -s extglob
+
+for f in "${DIR}"/!(.git|\..|\.|bin|.gitignore); do
+  ln -fs "${f}" "${HOME}/$(basename $f)"
+done

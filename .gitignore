@@ -11,3 +11,5 @@
 !.gitignore_global
 !.linux
 !.macos
+!bin/
+!bin/init
