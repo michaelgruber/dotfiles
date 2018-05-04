@@ -3,7 +3,7 @@
   email = mail@michaelgruber.me
 
 [core]
-  editor = "vim -f"
+  editor = "nvim -f"
   excludesfile = ~/.gitignore_global
 
 [color]
@@ -14,29 +14,13 @@
 
 [alias]
   last = log -1 HEAD
-
-  bundled = "!f() { \
-    local dest=\"$HOME/Dropbox/Git\\ Backups/\"; \
-    local repo=$(basename $(git rev-parse --show-toplevel)); \
-    git bundle create \"${dest}${repo}.bundle\" --all; \
-  }; f"
-
+  sync = pull --rebase upstream master
   unstage = reset HEAD --
-
-  start = "!f() { \
-    git init; \
-    if [ -e .gitignore ]; then \
-      mv .gitignore ._gitignore; \
-      touch .gitignore; \
-      git add .gitignore; \
-      mv ._gitignore .gitignore; \
-    else \
-      touch .gitignore; \
-      git add .gitignore; \
-    fi; \
-    git commit -m 'initial commit'; \
-    git checkout -b develop; \
-  }; f"
+  hide = update-index --skip-worktree
+  unhide = update-index --no-skip-worktree
+  hidden = "!git ls-files -v | awk -F' ' '$1 == \"S\" {$1=\"\"; print substr($0,2)}'"
+  hideall = "!git status --porcelain | awk -F' ' '{ $1=\"\"; print substr($2,1) }' | xargs git hide"
+  unhideall = "!git hidden | xargs git unhide"
 
 [cor]
   autocrlf = false

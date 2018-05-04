@@ -1,5 +1,5 @@
-# Add bins to to the `$PATH`
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH"
+# Add bins to to the `$PATH
+export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$(getconf PATH)"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -34,6 +34,12 @@ if [[ -d /usr/local/share/chruby ]]; then
   source /usr/local/share/chruby/auto.sh
 fi
 
+# Neovim
+if command -v nvim >/dev/null 2>&1; then
+  alias vim="nvim"
+  alias vi="nvim"
+fi
+
 # Yarn
 if command -v yarn >/dev/null; then
   export PATH="$PATH:$(yarn global bin)"
@@ -58,3 +64,4 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+command -v nvm >/dev/null 2>&1 && nvm use lts/carbon >/dev/null

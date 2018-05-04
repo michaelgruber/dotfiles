@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
 
+# Docker
 alias dcr='docker-compose run --rm'
 alias dcrw='dcr web'
+
+# Python
+alias pip='pip3'

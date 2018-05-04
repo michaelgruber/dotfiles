@@ -17,9 +17,17 @@ if ! command -v brew >/dev/null; then
   return
 fi
 
-# Python
-alias pip='pip2'
-export PATH="$PATH:$HOME/Library/Python/2.7/bin"
+# Setting PATH for Python 3.6
+py3_dir="/Library/Frameworks/Python.framework/Versions/3.6/bin"
+if [ -d "${py3_dir}" ]; then
+  export PATH="${py3_dir}:${PATH}"
+fi
+
+# Setting PATH for Python 2.7
+py2_dir="/Library/Frameworks/Python.framework/Versions/2.7/bin"
+if [ -d "${py2_dir}" ]; then
+  export PATH="${py2_dir}:${PATH}"
+fi
 
 # Android
 export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"

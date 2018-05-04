@@ -53,12 +53,73 @@ note() {
   fi
 
   cat <<- EOF > $file
-		---
+		<!---
 		date:  $meta_date
 		title: $args
-		---
-		
+		-->
+
+		# $args
 	EOF
 
-  vim $file
+  $EDITOR $file
+}
+
+gitstarted() {
+  if [ -d '.git' ]; then
+    local cc=$(git rev-list --all --count)
+    if [ $cc -gt 0 ]; then
+      echo 'This dir is already gitstarted'
+      return 1
+    fi
+  fi
+
+  git init
+
+  if [ -e .gitignore ]; then
+    mv .gitignore .gitignore.bak
+    touch .gitignore
+    git add .gitignore
+    mv .gitignore.bak .gitignore
+  else
+    touch .gitignore
+    git add .gitignore
+  fi
+
+  git commit -m 'initial commit'
+}
+
+__dl_init() {
+  if [ -z ${__dl_tool+x} ]; then
+    if command -v curl >/dev/null 2>&1; then
+      export __dl_tool='curl'
+      export __dl_tool_silent='-s'
+      export __dl_tool_output='-o'
+      return 0
+    fi
+
+    if command -v wget >/dev/null 2>&1; then
+      export __dl_tool='wget'
+      export __dl_tool_silent='-q'
+      export __dl_tool_output='-O'
+      return 0
+    fi
+
+    return 1
+  fi
+
+  return 0
+}
+
+dl() {
+  __dl_init
+  local src=$1
+  shift
+  local flags="${__dl_tool_silent}"
+
+  if [ $# -gt 0 ]; then
+    flags="${flags} ${__dl_tool_output} ${src}"
+    src=$1
+  fi
+
+  ${__dl_tool} ${flags} ${src}
 }
