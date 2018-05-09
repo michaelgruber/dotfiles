@@ -20,12 +20,14 @@ fi
 # Setting PATH for Python 3.6
 py3_dir="/Library/Frameworks/Python.framework/Versions/3.6/bin"
 if [ -d "${py3_dir}" ]; then
+  export PATH="${HOME}/Library/Python/3.6/bin:${PATH}"
   export PATH="${py3_dir}:${PATH}"
 fi
 
 # Setting PATH for Python 2.7
 py2_dir="/Library/Frameworks/Python.framework/Versions/2.7/bin"
 if [ -d "${py2_dir}" ]; then
+  export PATH="${HOME}/Library/Python/2.7/bin:${PATH}"
   export PATH="${py2_dir}:${PATH}"
 fi
 
