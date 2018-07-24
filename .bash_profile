@@ -1,5 +1,5 @@
 # Add bins to to the `$PATH
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$(getconf PATH)"
+export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/scripts:$(getconf PATH)"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
