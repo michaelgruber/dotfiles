@@ -6,3 +6,6 @@ alias dcrw='dcr web'
 
 # Python
 alias pip='pip3'
+
+# Utils
+alias pass='gopass'
