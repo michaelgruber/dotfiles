@@ -16,3 +16,6 @@ export PKG_CONFIG_PATH="$HOME/src/github.com/coretech/bossmoney-utils/customer_c
 
 # Mono
 export MONO_GAC_PREFIX='/usr/local'
+
+# Go
+export GO111MODULE=auto
