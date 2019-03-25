@@ -51,6 +51,9 @@ if hash go 2>/dev/null; then
   export PATH=$PATH:$GOPATH/bin
 fi
 
+# Rust
+export PATH="$PATH:$HOME/.cargo/bin"
+
 # direnv
 if command -v direnv >/dev/null; then
   # Hook direnv into shell
